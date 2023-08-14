@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+  - "sheet.xlsx"
+
+website:
+  title: "Lifeng Ren"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - lec0.rmd
+      - lec1.rmd
+
+format:
+  html:
+  
+    theme: united
+    css: styles.css
+    toc: true
+    toc_float: true
+
+    
+
+
+

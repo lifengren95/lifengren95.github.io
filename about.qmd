@@ -1,0 +1,7 @@
+---
+title: "About me"
+---
+
+Lifeng is a Ph.D. student in the Department of Applied Economics at the University of Minnesota. His research interests involve using computational methods to study environmental and natural resources economics and the impact of climate changes on both global and local scales. 
+
+Lifeng holds an M.S. in Applied Mathematics and Agricultural and Resource Economics from UC Davis. He received his B.S. in Mathematics and Agricultural Economics from Purdue University. 
