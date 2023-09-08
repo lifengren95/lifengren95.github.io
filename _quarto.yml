@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: docs
-  resources:
-  - "sheet.xlsx"
 
 website:
   title: "Lifeng Ren"
@@ -11,16 +9,44 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - lec0.rmd
-      - lec1.rmd
+      - sidebar:teaching
 
+  sidebar:
+    - id: teaching
+      title: Teaching
+      style: "docked"
+      background: light
+      collapse-level: 2
+      search: true
+      contents:
+        - section: "R-Review-2023"
+          contents:
+            - href: lec0.qmd
+            - href: lec1.qmd
+            - href: lec2.qmd
+            - href: lec3.qmd
+            - href: lec4.qmd
+            - href: lec5.qmd
+  back-to-top-navigation: true
+  page-footer: 
+    left: "Copyright 2023, Lifeng Ren" 
+    right: 
+      - icon: github
+        href: https://github.com/lfr00154/
+    
 format:
   html:
-  
     theme: united
     css: styles.css
     toc: true
-    toc_float: true
+    toc-float: true
+    toc-location: left
+    toc-depth: 2
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    fig-caption: yes
+    mathjax: local
 
     
 

@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Lifeng Ren">
+<meta name="dcterms.date" content="2023-09-07">
+
+<title>Lifeng Ren - Lecture 3</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Lifeng Ren</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About me</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li class="dropdown-header">R-Review-2023</li>
+        <li>
+    <a class="dropdown-item" href="./lec0.html" rel="" target="">
+ <span class="dropdown-text">Lecture 0</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec1.html" rel="" target="">
+ <span class="dropdown-text">Lecture 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec2.html" rel="" target="">
+ <span class="dropdown-text">Lecture 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec3.html" rel="" target="">
+ <span class="dropdown-text">Lecture 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec4.html" rel="" target="">
+ <span class="dropdown-text">Lecture 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec5.html" rel="" target="">
+ <span class="dropdown-text">Lecture 5</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec0.html">R-Review-2023</a></li><li class="breadcrumb-item"><a href="./lec3.html">Lecture 3</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">R-Review-2023</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec0.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 0</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 5</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#course-updates" id="toc-course-updates" class="nav-link active" data-scroll-target="#course-updates"><span class="header-section-number">1</span> Course Updates</a></li>
+  <li><a href="#recap-from-yesterday" id="toc-recap-from-yesterday" class="nav-link" data-scroll-target="#recap-from-yesterday"><span class="header-section-number">2</span> Recap from Yesterday</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3</span> Introduction</a></li>
+  <li><a href="#for-tomorrow" id="toc-for-tomorrow" class="nav-link" data-scroll-target="#for-tomorrow"><span class="header-section-number">4</span> For Tomorrow</a></li>
+  <li><a href="#data-manipulation-again" id="toc-data-manipulation-again" class="nav-link" data-scroll-target="#data-manipulation-again"><span class="header-section-number">5</span> Data Manipulation Again</a>
+  <ul class="collapse">
+  <li><a href="#merge-comparison-with-stata" id="toc-merge-comparison-with-stata" class="nav-link" data-scroll-target="#merge-comparison-with-stata"><span class="header-section-number">5.1</span> Merge: Comparison with STATA</a></li>
+  <li><a href="#reshaping" id="toc-reshaping" class="nav-link" data-scroll-target="#reshaping"><span class="header-section-number">5.2</span> Reshaping</a></li>
+  <li><a href="#dates" id="toc-dates" class="nav-link" data-scroll-target="#dates"><span class="header-section-number">5.3</span> Dates</a></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings"><span class="header-section-number">5.4</span> Strings</a></li>
+  <li><a href="#unique-identifiers-in-r" id="toc-unique-identifiers-in-r" class="nav-link" data-scroll-target="#unique-identifiers-in-r"><span class="header-section-number">5.5</span> Unique Identifiers in R</a></li>
+  </ul></li>
+  <li><a href="#basic-data-analysis-and-data-visulizations-in-r" id="toc-basic-data-analysis-and-data-visulizations-in-r" class="nav-link" data-scroll-target="#basic-data-analysis-and-data-visulizations-in-r"><span class="header-section-number">6</span> Basic Data Analysis and Data Visulizations in R</a>
+  <ul class="collapse">
+  <li><a href="#preliminary-checks" id="toc-preliminary-checks" class="nav-link" data-scroll-target="#preliminary-checks"><span class="header-section-number">6.1</span> Preliminary Checks</a></li>
+  <li><a href="#data-analysis-and-data-visulization-mtcars-example" id="toc-data-analysis-and-data-visulization-mtcars-example" class="nav-link" data-scroll-target="#data-analysis-and-data-visulization-mtcars-example"><span class="header-section-number">6.2</span> Data Analysis and Data Visulization (<code>mtcars</code> example)</a></li>
+  <li><a href="#show-basic-regression-figures" id="toc-show-basic-regression-figures" class="nav-link" data-scroll-target="#show-basic-regression-figures"><span class="header-section-number">6.3</span> 4. Show Basic Regression Figures</a></li>
+  </ul></li>
+  <li><a href="#comprehensive-reivew-project" id="toc-comprehensive-reivew-project" class="nav-link" data-scroll-target="#comprehensive-reivew-project"><span class="header-section-number">7</span> Comprehensive Reivew Project</a>
+  <ul class="collapse">
+  <li><a href="#introduction-1" id="toc-introduction-1" class="nav-link" data-scroll-target="#introduction-1"><span class="header-section-number">7.1</span> Introduction</a></li>
+  <li><a href="#datasets" id="toc-datasets" class="nav-link" data-scroll-target="#datasets"><span class="header-section-number">7.2</span> Datasets</a></li>
+  <li><a href="#workflows" id="toc-workflows" class="nav-link" data-scroll-target="#workflows"><span class="header-section-number">7.3</span> Workflows</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks"><span class="header-section-number">7.4</span> Tasks</a></li>
+  <li><a href="#challenging-question" id="toc-challenging-question" class="nav-link" data-scroll-target="#challenging-question"><span class="header-section-number">7.5</span> Challenging Question</a></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link" data-scroll-target="#solution"><span class="header-section-number">7.6</span> Solution</a></li>
+  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">8</span> Appendix</a>
+  <ul class="collapse">
+  <li><a href="#gsub" id="toc-gsub" class="nav-link" data-scroll-target="#gsub"><span class="header-section-number">8.1</span> <code>gsub</code></a></li>
+  </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">9</span> Reference</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lecture 3</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Lifeng Ren </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 7, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="course-updates" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Course Updates</h1>
+<ul>
+<li><p>Lecture 1’s link is now available on GitHub</p></li>
+<li><p>Any Questions? Comments? Suggestions?</p></li>
+</ul>
+</section>
+<section id="recap-from-yesterday" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Recap from Yesterday</h1>
+<ul>
+<li><p>Control structures</p>
+<ul>
+<li>Conditional statements (<code>if</code>, <code>else</code>, <code>ifelse</code>)</li>
+<li>Loops (<code>for</code>, <code>while</code>, <code>repeat</code>, <code>break</code>, <code>next</code>)</li>
+</ul></li>
+<li><p>Functions:</p>
+<ul>
+<li>Introduction to built-in functions</li>
+<li>Writing custom functions</li>
+<li>The <code>apply</code> family of functions (<code>lapply</code>, <code>sapply</code>, <code>tapply</code>, etc.)</li>
+</ul></li>
+<li><p>Library and Packages</p></li>
+<li><p>Data Manipulation</p>
+<ul>
+<li><code>base</code></li>
+<li><code>tidyverse</code></li>
+<li><code>data.table</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="introduction" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Introduction</h1>
+<p>In this lecture, we will delve into the following topics:</p>
+<ul>
+<li>More in Data Cleaning and Wrangling:
+<ul>
+<li>Revisit the Combining Data sets from yesterday
+<ul>
+<li><code>merge</code>: <code>base</code></li>
+<li><code>join</code>: <code>dplyr</code></li>
+<li>Compare with <code>1:m</code>, <code>m:1</code>, <code>1:1</code> in STATA</li>
+</ul></li>
+<li>Data Reshaping
+<ul>
+<li><code>data.table</code></li>
+</ul></li>
+<li>Data Standardization
+<ul>
+<li>Dates:</li>
+<li>Text: <code>stringr</code></li>
+</ul></li>
+<li>Unique Identifier</li>
+</ul></li>
+<li>Basic Data Analysis and Data Visualization in R
+<ul>
+<li>Preliminary Data Checks</li>
+<li>Simple Regression</li>
+<li>Results and Visualization</li>
+</ul></li>
+<li>A Comprehensive Project in Class
+<ul>
+<li>A review for the last 2.5 days</li>
+<li>Do this in the <code>rmd</code> file I provide you.</li>
+<li>Your output should be a <code>html</code> report</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="for-tomorrow" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> For Tomorrow</h1>
+<ul>
+<li>Intermediate Econometrics in R Review
+<ul>
+<li>Mathematical Statistics in R
+<ul>
+<li>Distributions</li>
+<li>Simulations</li>
+</ul></li>
+<li>Intermediate Applied Econometrics
+<ul>
+<li>Testing</li>
+<li>…</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="data-manipulation-again" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Data Manipulation Again</h1>
+<section id="merge-comparison-with-stata" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="merge-comparison-with-stata"><span class="header-section-number">5.1</span> Merge: Comparison with STATA</h2>
+<p>In STATA, when merging datasets, you specify the type of merge using:</p>
+<ul>
+<li><code>1:1</code>: One-to-one join: Each observation in the dataset has a unique identifier, and each identifier in one dataset matches to one and only one identifier in the other dataset.</li>
+<li><code>1:m</code>: One-to-many join: You start with the “many” dataset. For each unique identifier in the “many” dataset, there’s a corresponding single observation in the “one” dataset. When you perform the merge, each of the multiple observations in the “many” dataset with the same identifier gets matched to a single observation in the “one” dataset.</li>
+<li><code>m:1</code>: Many-to-one join: You start with the “one” dataset. For each unique identifier in the “one” dataset, there are multiple corresponding observations in the “many” dataset. When you perform the merge, the single observation in the “one” dataset gets matched to each of the multiple observations in the “many” dataset with the same identifier.</li>
+</ul>
+<hr>
+<p>Let’s use examples to understand the link and difference between merging datasets in R and STATA. We will see two cases: 1) all <code>keys</code> can be matched and 2) some <code>keys</code> cannot be matched:</p>
+<ol type="1">
+<li>Demo with <code>R</code> and save the temporary data into a <code>.dta</code> file using the <code>haven</code> library.</li>
+<li>Use <code>STATA</code> commands and see if the output matches our expectations.</li>
+</ol>
+<hr>
+<section id="every-key-exist-in-both-data-set" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="every-key-exist-in-both-data-set"><span class="header-section-number">5.1.1</span> Every <code>Key</code> Exist in Both Data Set</h3>
+<p>All three should be the same.</p>
+<hr>
+<section id="r-demo-using-base" class="level4">
+<h4 class="anchored" data-anchor-id="r-demo-using-base">R Demo using <code>base</code></h4>
+<p>Since we need to save datasets, we need to define the working directory and libraries we are going to use as usual.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"~/Library/CloudStorage/Box-Box/Teaching/R_2023/local/lec3"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><strong>One-to-One (<code>1:1</code>) Merge:</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">28</span>))</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(df1, <span class="st">"df1.dta"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(df2, <span class="st">"df2.dta"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>merged_df <span class="ot">&lt;-</span> <span class="fu">merge</span>(df1, df2, <span class="at">by =</span> <span class="st">"ID"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(merged_df, <span class="st">"one_to_one_merge.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><strong>Many-to-One (<code>m:1</code>) Merge:</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>many_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">Score =</span> <span class="fu">c</span>(<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">88</span>, <span class="dv">92</span>))</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>one_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">ID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(many_df, <span class="st">"many_df.dta"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(one_df, <span class="st">"one_df.dta"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>merged_df <span class="ot">&lt;-</span> <span class="fu">merge</span>(many_df, one_df, <span class="at">by =</span> <span class="st">"ID"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(merged_df, <span class="st">"many_to_one_merge_R.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><strong>One-to-Many (<code>1:m</code>) Merge:</strong></p>
+<p>(Using the same example datasets as for the <code>m:1</code> merge)</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>merged_df <span class="ot">&lt;-</span> <span class="fu">merge</span>(one_df, many_df, <span class="at">by =</span> <span class="st">"ID"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">write_dta</span>(merged_df, <span class="st">"one_to_many_merge_R.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<hr>
+<p><strong>STATA Demo</strong></p>
+<p>We should expect the perfect match.</p>
+<hr>
+<p><strong>R Demo with <code>dplyr</code>: <code>left_join</code> and <code>right_join</code></strong></p>
+<p>For this case, the results should be the same. Because both <code>many_df</code> and <code>one_df</code> are having information for all IDs. Let us double-check if we are using <code>left_join</code>, <code>right_join</code> in R.</p>
+<p>First, we’ll create two data frames: <code>teachers</code> (the “one” dataset) and <code>classes</code> (the “many” dataset). Then, we’ll perform both m:1 and 1:m merges using both left and right joins, and show the results.</p>
+<p>Here’s the R code:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the required library</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the 'teachers' dataframe (the "one" dataset)</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>teachers <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">TeacherID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">TeacherName =</span> <span class="fu">c</span>(<span class="st">"Mr. Smith"</span>, <span class="st">"Mrs. Jones"</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the 'classes' dataframe (the "many" dataset)</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>classes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">ClassID =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>),</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">ClassName =</span> <span class="fu">c</span>(<span class="st">"Math"</span>, <span class="st">"Science"</span>, <span class="st">"English"</span>),</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">TeacherID =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># m:1 Merge using left join (starting with 'classes' as the base)</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>m1_merge_left <span class="ot">&lt;-</span> <span class="fu">left_join</span>(classes, teachers, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 1:m Merge using left join (starting with 'teachers' as the base)</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="co"># This produces the same result as the m:1 merge but potentially with reordered columns</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>one_m_merge_left <span class="ot">&lt;-</span> <span class="fu">left_join</span>(teachers, classes, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># m:1 Merge using right join (starting with 'classes' as the base)</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>m1_merge_right <span class="ot">&lt;-</span> <span class="fu">right_join</span>(classes, teachers, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 1:m Merge using right join (starting with 'teachers' as the base)</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>one_m_merge_right <span class="ot">&lt;-</span> <span class="fu">right_join</span>(teachers, classes, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">m1_merge_left =</span> m1_merge_left,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">one_m_merge_left =</span> one_m_merge_left,</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">m1_merge_right =</span> m1_merge_right,</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="at">one_m_merge_right =</span> one_m_merge_right</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$m1_merge_left
+  ClassID ClassName TeacherID TeacherName
+1       A      Math         1   Mr. Smith
+2       B   Science         1   Mr. Smith
+3       C   English         2  Mrs. Jones
+
+$one_m_merge_left
+  TeacherID TeacherName ClassID ClassName
+1         1   Mr. Smith       A      Math
+2         1   Mr. Smith       B   Science
+3         2  Mrs. Jones       C   English
+
+$m1_merge_right
+  ClassID ClassName TeacherID TeacherName
+1       A      Math         1   Mr. Smith
+2       B   Science         1   Mr. Smith
+3       C   English         2  Mrs. Jones
+
+$one_m_merge_right
+  TeacherID TeacherName ClassID ClassName
+1         1   Mr. Smith       A      Math
+2         1   Mr. Smith       B   Science
+3         2  Mrs. Jones       C   English</code></pre>
+</div>
+</div>
+<p>Just like before, everything matched!</p>
+<hr>
+</section>
+</section>
+<section id="some-keys-cannot-be-matched" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="some-keys-cannot-be-matched"><span class="header-section-number">5.1.2</span> Some <code>keys</code> cannot be matched</h3>
+<p>Now, let us see the behavior of <code>left_join</code> when there’s no match for a record in either the left or the right table, and we want this being demonstrated using both <code>dplyr</code> and base R.</p>
+<p>Let’s slightly modify our datasets to have unmatched records:</p>
+<ol type="1">
+<li>In the <code>teachers</code> dataframe, let’s add a teacher with <code>TeacherID = 3</code> named “Mr.&nbsp;Doe” who doesn’t have any associated class.</li>
+<li>In the <code>classes</code> dataframe, let’s add a class with <code>ClassID = "D"</code> named “History” with <code>TeacherID = 4</code>, but there’s no teacher with <code>TeacherID = 4</code> in the <code>teachers</code> dataframe.</li>
+</ol>
+<p>Now, let’s perform the left joins using both <code>dplyr</code> and base R:</p>
+<hr>
+<p><strong>Using <code>dplyr</code>:</strong></p>
+<ol type="1">
+<li>Perform <code>left_join</code> using <code>classes</code> as the base.</li>
+<li>Perform <code>left_join</code> using <code>teachers</code> as the base.</li>
+</ol>
+<p><strong>Using <code>base</code> R:</strong></p>
+<ol type="1">
+<li>Use <code>merge</code> with <code>all.x = TRUE</code> using <code>classes</code> as the base.</li>
+<li>Use <code>merge</code> with <code>all.x = TRUE</code> using <code>teachers</code> as the base.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Modify the datasets</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>teachers_modified <span class="ot">&lt;-</span> <span class="fu">rbind</span>(teachers, <span class="fu">data.frame</span>(<span class="at">TeacherID =</span> <span class="dv">3</span>, <span class="at">TeacherName =</span> <span class="st">"Mr. Doe"</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>classes_modified <span class="ot">&lt;-</span> <span class="fu">rbind</span>(classes, <span class="fu">data.frame</span>(<span class="at">ClassID =</span> <span class="st">"D"</span>, <span class="at">ClassName =</span> <span class="st">"History"</span>, <span class="at">TeacherID =</span> <span class="dv">4</span>))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Using dplyr:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>dplyr_classes_base <span class="ot">&lt;-</span> <span class="fu">left_join</span>(classes_modified, teachers_modified, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>dplyr_teachers_base <span class="ot">&lt;-</span> <span class="fu">left_join</span>(teachers_modified, classes_modified, <span class="at">by =</span> <span class="st">"TeacherID"</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Using base R:</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>base_classes_base <span class="ot">&lt;-</span> <span class="fu">merge</span>(classes_modified, teachers_modified, <span class="at">by =</span> <span class="st">"TeacherID"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>base_teachers_base <span class="ot">&lt;-</span> <span class="fu">merge</span>(teachers_modified, classes_modified, <span class="at">by =</span> <span class="st">"TeacherID"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">dplyr_classes_base =</span> dplyr_classes_base,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">dplyr_teachers_base =</span> dplyr_teachers_base,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_classes_base =</span> base_classes_base,</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">base_teachers_base =</span> base_teachers_base</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>$dplyr_classes_base
+  ClassID ClassName TeacherID TeacherName
+1       A      Math         1   Mr. Smith
+2       B   Science         1   Mr. Smith
+3       C   English         2  Mrs. Jones
+4       D   History         4        &lt;NA&gt;
+
+$dplyr_teachers_base
+  TeacherID TeacherName ClassID ClassName
+1         1   Mr. Smith       A      Math
+2         1   Mr. Smith       B   Science
+3         2  Mrs. Jones       C   English
+4         3     Mr. Doe    &lt;NA&gt;      &lt;NA&gt;
+
+$base_classes_base
+  TeacherID ClassID ClassName TeacherName
+1         1       A      Math   Mr. Smith
+2         1       B   Science   Mr. Smith
+3         2       C   English  Mrs. Jones
+4         4       D   History        &lt;NA&gt;
+
+$base_teachers_base
+  TeacherID TeacherName ClassID ClassName
+1         1   Mr. Smith       A      Math
+2         1   Mr. Smith       B   Science
+3         2  Mrs. Jones       C   English
+4         3     Mr. Doe    &lt;NA&gt;      &lt;NA&gt;</code></pre>
+</div>
+</div>
+<p><strong>NOTES:</strong></p>
+<p>In both the <code>dplyr</code> and base R results, we can observe that where there’s no match for a record in the left table, <code>NA</code> values are filled in for columns from the right table. Which should be similar to the <code>m:1</code> results from STATA’s picture below. (NOT EXACT THE SAME BUT SAME IDEA)</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://drive.google.com/uc?export=view&amp;id=1GRP7F4y1kN8w3dU97Y3xVlDIKyoHu1aL.png" class="img-fluid" style="width:50.0%"></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="reshaping" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="reshaping"><span class="header-section-number">5.2</span> Reshaping</h2>
+<section id="base-r-methods" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="base-r-methods"><span class="header-section-number">5.2.1</span> <code>Base</code> R Methods:</h3>
+<p><strong><code>reshape</code> Function:</strong></p>
+<p>Base R provides the <code>reshape</code> function, which can convert data from wide to long format and vice versa.</p>
+<ul>
+<li><p><strong>Wide to Long</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Sample data</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Time1 =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Time2 =</span> <span class="fu">c</span>(<span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>  ID Time1 Time2
+1  1     5     8
+2  2     6     9
+3  3     7    10</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Reshaping to long format</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  long_data <span class="ot">&lt;-</span> <span class="fu">reshape</span>(data, <span class="at">direction =</span> <span class="st">"long"</span>, <span class="at">varying =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"Time1"</span>, <span class="st">"Time2"</span>)), </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">v.names =</span> <span class="st">"Value"</span>, <span class="at">idvar =</span> <span class="st">"ID"</span>, <span class="at">timevar =</span> <span class="st">"Time"</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(long_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>    ID Time Value
+1.1  1    1     5
+2.1  2    1     6
+3.1  3    1     7
+1.2  1    2     8
+2.2  2    2     9
+3.2  3    2    10</code></pre>
+</div>
+</div></li>
+<li><p><strong>Long to Wide</strong>:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Reshaping to wide format</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    wide_data <span class="ot">&lt;-</span> <span class="fu">reshape</span>(long_data, <span class="at">direction =</span> <span class="st">"wide"</span>, <span class="at">v.names =</span> <span class="st">"Value"</span>, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">idvar =</span> <span class="st">"ID"</span>, <span class="at">timevar =</span> <span class="st">"Time"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(wide_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>    ID Value.1 Value.2
+1.1  1       5       8
+2.1  2       6       9
+3.1  3       7      10</code></pre>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="using-data.table" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="using-data.table"><span class="header-section-number">5.2.2</span> Using <code>data.table</code>:</h3>
+<p>The <code>data.table</code> library offers an efficient and flexible approach to data reshaping, especially for large datasets.</p>
+<p><strong>Melting (Wide to Long):</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert data frame to data table</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>DT <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(data)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt to long format</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>melted_data <span class="ot">&lt;-</span> <span class="fu">melt</span>(DT, <span class="at">id.vars =</span> <span class="st">"ID"</span>, <span class="at">measure.vars =</span> <span class="fu">c</span>(<span class="st">"Time1"</span>, <span class="st">"Time2"</span>), </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">variable.name =</span> <span class="st">"Time"</span>, <span class="at">value.name =</span> <span class="st">"Value"</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(melted_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ID  Time Value
+1:  1 Time1     5
+2:  2 Time1     6
+3:  3 Time1     7
+4:  1 Time2     8
+5:  2 Time2     9
+6:  3 Time2    10</code></pre>
+</div>
+</div>
+<p><strong>Casting (Long to Wide):</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cast to wide format</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>casted_data <span class="ot">&lt;-</span> <span class="fu">dcast</span>(melted_data, ID <span class="sc">~</span> Time, <span class="at">value.var =</span> <span class="st">"Value"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(casted_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>   ID Time1 Time2
+1:  1     5     8
+2:  2     6     9
+3:  3     7    10</code></pre>
+</div>
+</div>
+<p>Remember, the choice between base R and <code>data.table</code> methods often depends on your specific needs. <code>data.table</code> is especially powerful for large datasets due to its efficiency, while base R can be simpler for basic reshaping tasks or for those who are more familiar with its syntax.</p>
+<hr>
+</section>
+</section>
+<section id="dates" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="dates"><span class="header-section-number">5.3</span> Dates</h2>
+<ul>
+<li>Date data can be tricky due to various formats and conventions across the world.</li>
+<li>Proper handling is essential for chronological analysis, time series forecasting, and event tracking.</li>
+<li><code>Sys.Date()</code>: Returns the current date.</li>
+<li><code>as.Date()</code>: Converts a character string into a Date object.</li>
+<li><code>format()</code>: Formats a Date object into a desired character representation.</li>
+</ul>
+<hr>
+<p><strong>Examples</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Current date</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>current_date <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-09-07"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a string to a date</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>date_str <span class="ot">&lt;-</span> <span class="st">"2023-08-16"</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>converted_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(date_str)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(converted_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2023-08-16"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Format a date</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>formatted_date <span class="ot">&lt;-</span> <span class="fu">format</span>(current_date, <span class="at">format=</span><span class="st">"%B %d, %Y"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(formatted_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "September 07, 2023"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define starting and ending dates</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-01"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>end_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2023-01-10"</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a sequence of dates</span></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>date_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(start_date, end_date, <span class="at">by=</span><span class="st">"days"</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sequence to a data frame</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>date_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Date =</span> date_seq)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the data frame</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(date_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>         Date
+1  2023-01-01
+2  2023-01-02
+3  2023-01-03
+4  2023-01-04
+5  2023-01-05
+6  2023-01-06
+7  2023-01-07
+8  2023-01-08
+9  2023-01-09
+10 2023-01-10</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="strings" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="strings"><span class="header-section-number">5.4</span> Strings</h2>
+<p>Text data often contains noise in the form of special characters, inconsistencies in formatting, and more. Properly cleaning and manipulating such data is crucial.</p>
+<ul>
+<li>The <code>stringr</code> package in R offers a host of functions that can aid in this.</li>
+<li><code>gsub</code> in <code>base</code> R can do a lot similar functions, I will leave that to you for the future study. Some examples have been provided in the Appendix Section.</li>
+</ul>
+<hr>
+<section id="removing-special-characters" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="removing-special-characters"><span class="header-section-number">5.4.1</span> Removing Special Characters</h3>
+<ul>
+<li>Special characters can be noise in some analyses.</li>
+<li>Removing them can simplify text and aid in other text processing tasks.</li>
+<li><strong><code>str_replace_all()</code></strong>: Replaces all instances of a pattern in a string.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"Hello, world! This is a test. #Test123"</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>cleaned_text <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(text, <span class="st">"[^[:alnum:][:space:]]"</span>, <span class="st">""</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cleaned_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello world This is a test Test123"</code></pre>
+</div>
+</div>
+</section>
+<section id="string-matching" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="string-matching"><span class="header-section-number">5.4.2</span> String Matching</h3>
+<ul>
+<li>Useful to detect if a string contains certain patterns or characters.</li>
+<li><strong><code>str_detect()</code></strong>: Detects the presence or absence of a pattern in a string.</li>
+<li><strong><code>str_which()</code></strong>: Returns the indices of strings that match a pattern.</li>
+<li><strong><code>str_match()</code></strong>: Extract matched groups from a string based on a pattern.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Detect if a string contains "world"</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Hello world"</span>, <span class="st">"Hello R"</span>, <span class="st">"R is a world of statistics"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_detect</span>(text, <span class="st">"world"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get indices of strings that contain "R"</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_which</span>(text, <span class="st">"R"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 3</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract matched groups</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>pattern <span class="ot">&lt;-</span> <span class="st">"(</span><span class="sc">\\</span><span class="st">d{4})-(</span><span class="sc">\\</span><span class="st">d{2})-(</span><span class="sc">\\</span><span class="st">d{2})"</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>date_str <span class="ot">&lt;-</span> <span class="st">"Today's date is 2023-08-16."</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_match</span>(date_str, pattern))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1]         [,2]   [,3] [,4]
+[1,] "2023-08-16" "2023" "08" "16"</code></pre>
+</div>
+</div>
+</section>
+<section id="case-conversion" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="case-conversion"><span class="header-section-number">5.4.3</span> Case Conversion</h3>
+<ul>
+<li>To ensure uniformity in text data.</li>
+<li><strong><code>str_to_upper()</code></strong>: Converts strings to upper case.</li>
+<li><strong><code>str_to_lower()</code></strong>: Converts strings to lower case.</li>
+<li><strong><code>str_to_title()</code></strong>: Converts strings to title case.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"Hello, World!"</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_to_upper</span>(text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "HELLO, WORLD!"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_to_lower</span>(text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "hello, world!"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_to_title</span>(text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello, World!"</code></pre>
+</div>
+</div>
+</section>
+<section id="splitting-strings" class="level3" data-number="5.4.4">
+<h3 data-number="5.4.4" class="anchored" data-anchor-id="splitting-strings"><span class="header-section-number">5.4.4</span> Splitting Strings</h3>
+<ul>
+<li>To break a string into parts based on a delimiter.</li>
+<li><strong><code>str_split()</code></strong>: Splits a string into parts.</li>
+</ul>
+<p><strong>Examples</strong></p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"apple,banana,grape"</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_split</span>(text, <span class="st">","</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] "apple"  "banana" "grape" </code></pre>
+</div>
+</div>
+</section>
+<section id="other-stringr-functions-in-r-with-examples" class="level3" data-number="5.4.5">
+<h3 data-number="5.4.5" class="anchored" data-anchor-id="other-stringr-functions-in-r-with-examples"><span class="header-section-number">5.4.5</span> Other <code>stringr</code> functions in R with examples</h3>
+<ul>
+<li><strong><code>str_length()</code></strong>: Computes the length of a string.</li>
+<li><strong><code>str_c()</code></strong>: Concatenates strings.</li>
+<li><strong><code>str_sub()</code></strong>: Extracts or replaces substrings.</li>
+</ul>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="co"># String length</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_length</span>(<span class="st">"Hello, world!"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_c</span>(<span class="st">"Hello"</span>, <span class="st">"world"</span>, <span class="at">sep=</span><span class="st">", "</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello, world"</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Substring</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">str_sub</span>(<span class="st">"Hello, world!"</span>, <span class="dv">1</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello"</code></pre>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="unique-identifiers-in-r" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="unique-identifiers-in-r"><span class="header-section-number">5.5</span> Unique Identifiers in R</h2>
+<ul>
+<li>A unique identifier (UID) is an identifier that ensures distinctness among all other items.</li>
+<li>UIDs are crucial for indexing, referencing, and joining datasets without confusion.</li>
+</ul>
+<section id="functions-to-identify-unique-and-duplicate-values" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="functions-to-identify-unique-and-duplicate-values"><span class="header-section-number">5.5.1</span> Functions to Identify Unique and Duplicate Values</h3>
+<p><strong><code>unique()</code></strong>: Returns a vector of unique values.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>unique_vals <span class="ot">&lt;-</span> <span class="fu">unique</span>(vec)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(unique_vals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3 4 5</code></pre>
+</div>
+</div>
+<p><strong><code>duplicated()</code></strong>: Returns a logical vector indicating whether an element is a duplicate.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>dupes <span class="ot">&lt;-</span> <span class="fu">duplicated</span>(vec)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(dupes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE FALSE</code></pre>
+</div>
+</div>
+<p><strong><code>distinct()</code></strong> from the <code>dplyr</code> package: Used to remove duplicate rows from a data frame or tibble.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Alice"</span>, <span class="st">"Charlie"</span>), <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">35</span>))</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>distinct_df <span class="ot">&lt;-</span> <span class="fu">distinct</span>(df)</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(distinct_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>     name age
+1   Alice  25
+2     Bob  30
+3 Charlie  35</code></pre>
+</div>
+</div>
+</section>
+<section id="generating-unique-identifiers" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="generating-unique-identifiers"><span class="header-section-number">5.5.2</span> Generating Unique Identifiers</h3>
+<p><strong><code>seq_along()</code></strong>: Generate a sequence along an object’s length.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"cherry"</span>)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>uids <span class="ot">&lt;-</span> <span class="fu">seq_along</span>(vec)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(uids)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+</div>
+<p><strong><code>make.unique()</code></strong>: Generates unique strings by appending numbers.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"apple"</span>, <span class="st">"apple"</span>, <span class="st">"banana"</span>)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>unique_vec <span class="ot">&lt;-</span> <span class="fu">make.unique</span>(vec)</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(unique_vec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "apple"   "apple.1" "banana" </code></pre>
+</div>
+</div>
+</section>
+<section id="checking-for-unique-identifiers-with-isid" class="level3" data-number="5.5.3">
+<h3 data-number="5.5.3" class="anchored" data-anchor-id="checking-for-unique-identifiers-with-isid"><span class="header-section-number">5.5.3</span> Checking for Unique Identifiers with <code>isid()</code></h3>
+<p>The <code>isid()</code> function checks if a given set of variables uniquely identifies the observations in a dataset. Just like the one we are using in <code>STATA</code>.</p>
+<ul>
+<li>You need to install <code>eeptools</code> package for this.</li>
+</ul>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(eeptools)</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>), <span class="at">value =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>))</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if 'id' uniquely identifies the data</span></span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a><span class="fu">isid</span>(df, <span class="st">"id"</span>, <span class="at">verbose =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Are variables a unique ID?
+[1] FALSE
+Variables define this many unique rows:
+[1] 3
+There are this many total rows in the data:
+[1] 4</code></pre>
+</div>
+</div>
+<p>In this example, the <code>isid()</code> function would return <code>FALSE</code> because the ‘id’ variable does not uniquely identify each row in the dataset.</p>
+</section>
+<section id="considerations" class="level3" data-number="5.5.4">
+<h3 data-number="5.5.4" class="anchored" data-anchor-id="considerations"><span class="header-section-number">5.5.4</span> Considerations</h3>
+<ul>
+<li>When working with large datasets or datasets that will be merged, it’s essential to ensure that the data’s unique identifiers remain consistent.</li>
+<li>Always check for the uniqueness of identifiers, especially before operations like joining or merging datasets, to prevent unintended duplications or omissions.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="basic-data-analysis-and-data-visulizations-in-r" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Basic Data Analysis and Data Visulizations in R</h1>
+<section id="preliminary-checks" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="preliminary-checks"><span class="header-section-number">6.1</span> Preliminary Checks</h2>
+<p>Before diving into any data analysis, it’s essential to understand and clean your data. This involves checking for outliers, handling missing values, and visualizing data distributions.</p>
+<ul>
+<li><p>For our demonstration, we’ll use the <code>mtcars</code> dataset.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div></li>
+</ul>
+<section id="checking-for-outliers" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="checking-for-outliers"><span class="header-section-number">6.1.1</span> Checking for Outliers</h3>
+<p>Outliers can significantly affect regression results. A simple way to check for outliers is by using boxplots.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(mtcars<span class="sc">$</span>mpg, <span class="at">main=</span><span class="st">"Boxplot of MPG"</span>, <span class="at">ylab=</span><span class="st">"Miles Per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Points outside the “whiskers” of the boxplot could be potential outliers.</p>
+</section>
+<section id="handling-missing-values" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="handling-missing-values"><span class="header-section-number">6.1.2</span> Handling Missing Values</h3>
+<p>Data often comes with missing values, and it’s crucial to handle them appropriately.</p>
+<ol type="1">
+<li><p><strong>Identifying Missing Values</strong></p>
+<p>Use <code>is.na()</code> to identify missing values:</p></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>    missing_vals <span class="ot">&lt;-</span> <span class="fu">is.na</span>(mtcars<span class="sc">$</span>mpg)</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>(missing_vals)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Handling Strategies</strong>
+<ul>
+<li>Remove rows with missing values: <code>na.omit()</code></li>
+<li>Impute missing values using mean, median, or a specific strategy.</li>
+</ul></li>
+</ol>
+</section>
+<section id="data-visualization" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">6.1.3</span> Data Visualization</h3>
+<p>Visualizing your data can help in understanding distributions, relationships, and potential issues.</p>
+<ol type="1">
+<li><strong>Histogram</strong>: Understand the distribution of a variable.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hist</span>(mtcars<span class="sc">$</span>mpg, <span class="at">main=</span><span class="st">"Histogram of MPG"</span>, <span class="at">xlab=</span><span class="st">"Miles Per Gallon"</span>, <span class="at">col=</span><span class="st">"lightblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Correlation Plot</strong>: Understand relationships between variables.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(mtcars[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">main=</span><span class="st">"Scatterplot Matrix"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Density Plot</strong>: Another way to check the distribution.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x=</span>mpg)) <span class="sc">+</span> </span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"blue"</span>, <span class="at">alpha=</span><span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Density Plot of MPG"</span>, <span class="at">x=</span><span class="st">"Miles Per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>By conducting these preliminary checks, you ensure that your data is ready for deeper analysis, and any insights or results derived are more likely to be reliable.</p>
+<hr>
+</section>
+</section>
+<section id="data-analysis-and-data-visulization-mtcars-example" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="data-analysis-and-data-visulization-mtcars-example"><span class="header-section-number">6.2</span> Data Analysis and Data Visulization (<code>mtcars</code> example)</h2>
+<ul>
+<li><p>Make sure you’ve installed the packages: <code>tidyverse</code>, <code>lmtest</code></p></li>
+<li><p>Done the first-round preliminary data check.</p></li>
+</ul>
+<section id="loading-the-libraries" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="loading-the-libraries"><span class="header-section-number">6.2.1</span> Loading the Libraries</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmtest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="running-a-simple-regression-in-r" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="running-a-simple-regression-in-r"><span class="header-section-number">6.2.2</span> Running a Simple Regression in R</h3>
+<p>A regression allows us to understand relationships between variables. The simplest form is the linear regression, represented as:</p>
+<p><span class="math display">\[
+Y = \beta_0 + \beta_1 X + \epsilon
+\]</span></p>
+<p>Where: - <span class="math inline">\(Y\)</span> is the dependent variable. - <span class="math inline">\(X\)</span> is the independent variable. - <span class="math inline">\(\beta_0\)</span> is the intercept. - <span class="math inline">\(\beta_1\)</span> is the slope. - <span class="math inline">\(\epsilon\)</span> is the error term.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt, <span class="at">data =</span> mtcars)</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mpg ~ wt, data = mtcars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.5432 -2.3647 -0.1252  1.4096  6.8727 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  37.2851     1.8776  19.858  &lt; 2e-16 ***
+wt           -5.3445     0.5591  -9.559 1.29e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 3.046 on 30 degrees of freedom
+Multiple R-squared:  0.7528,    Adjusted R-squared:  0.7446 
+F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10</code></pre>
+</div>
+</div>
+<p>The <code>summary()</code> function provides a detailed summary of the regression results. Here, we are trying to predict <code>mpg</code> (miles per gallon) using the weight (<code>wt</code>) of the car, using the <code>mtcars</code> dataset.</p>
+</section>
+<section id="accessing-regression-results" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="accessing-regression-results"><span class="header-section-number">6.2.3</span> Accessing Regression Results</h3>
+<p>We can save the <code>summary</code> of the model first:</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>model_summary <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>And we can see that it is a <code>list</code>! This is something we’ve already learned.</p>
+<p>From this summary object, you can extract:</p>
+<ul>
+<li><code>coefficients</code>: A matrix where each row represents a predictor (including the intercept) and columns provide details like estimate, standard error, t-value, and p-value.</li>
+<li><code>sigma</code>: The residual standard error.</li>
+<li><code>r.squared</code>: The R-squared value.</li>
+<li><code>adj.r.squared</code>: The adjusted R-squared value.</li>
+<li><code>fstatistic</code>: The F-statistic value and its degrees of freedom.</li>
+</ul>
+<ol type="1">
+<li><strong>Access the Coefficients</strong></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Access using summary list</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>coeff_matrix <span class="ot">&lt;-</span> model_summary<span class="sc">$</span>coefficients</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(coeff_matrix)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>             Estimate Std. Error   t value     Pr(&gt;|t|)
+(Intercept) 37.285126   1.877627 19.857575 8.241799e-19
+wt          -5.344472   0.559101 -9.559044 1.293959e-10</code></pre>
+</div>
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Directly access using `coefficients` functions for regression objects</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>betas <span class="ot">&lt;-</span> <span class="fu">coefficients</span>(model) <span class="co"># this will give you only the betas</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(betas)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)          wt 
+  37.285126   -5.344472 </code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Access the Standard Errors</strong></li>
+</ol>
+<p>The standard errors of the coefficients can be extracted from the model’s summary object.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>standard_errors <span class="ot">&lt;-</span> coeff_matrix[, <span class="st">"Std. Error"</span>]</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(standard_errors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)          wt 
+   1.877627    0.559101 </code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Access the t-statistics</strong></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>t_values <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)<span class="sc">$</span>coefficients[, <span class="st">"t value"</span>]</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(t_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>(Intercept)          wt 
+  19.857575   -9.559044 </code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li><strong>Access the p-values</strong></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>p_values <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)<span class="sc">$</span>coefficients[, <span class="st">"Pr(&gt;|t|)"</span>]</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p_values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code> (Intercept)           wt 
+8.241799e-19 1.293959e-10 </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="show-basic-regression-figures" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="show-basic-regression-figures"><span class="header-section-number">6.3</span> 4. Show Basic Regression Figures</h2>
+<section id="scatter-plot-with-regression-line" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="scatter-plot-with-regression-line"><span class="header-section-number">6.3.1</span> Scatter Plot with Regression Line</h3>
+<p>Visualizing the relationship between the independent and dependent variables can be very insightful.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x=</span>wt, <span class="at">y=</span>mpg)) <span class="sc">+</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>, <span class="at">col=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Relationship between Car Weight and MPG"</span>, <span class="at">x=</span><span class="st">"Weight"</span>, <span class="at">y=</span><span class="st">"Miles Per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="residuals-vs.-fitted-values" class="level3" data-number="6.3.2">
+<h3 data-number="6.3.2" class="anchored" data-anchor-id="residuals-vs.-fitted-values"><span class="header-section-number">6.3.2</span> Residuals vs.&nbsp;Fitted Values</h3>
+<p>Checking the residuals can help diagnose potential issues with the model.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>residuals <span class="ot">&lt;-</span> <span class="fu">resid</span>(model)</span>
+<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>fitted_values <span class="ot">&lt;-</span> <span class="fu">fitted</span>(model)</span>
+<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>fitted_values, <span class="at">y=</span>residuals)) <span class="sc">+</span></span>
+<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Residuals vs. Fitted Values"</span>, <span class="at">x=</span><span class="st">"Fitted Values"</span>, <span class="at">y=</span><span class="st">"Residuals"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="lec3_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="comprehensive-reivew-project" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Comprehensive Reivew Project</h1>
+<hr>
+<section id="introduction-1" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="introduction-1"><span class="header-section-number">7.1</span> Introduction</h2>
+<p>This comprehensive project is designed to review the concepts you’ve learned throughout the course. You’ll apply techniques from data cleaning to advanced data analysis. We’ll work with both built-in datasets and an external dataset.</p>
+</section>
+<section id="datasets" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="datasets"><span class="header-section-number">7.2</span> Datasets</h2>
+<ol type="1">
+<li><strong>Built-in Dataset</strong>: <code>mtcars</code></li>
+<li><strong>External Dataset</strong>: “client_data.csv”</li>
+</ol>
+</section>
+<section id="workflows" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="workflows"><span class="header-section-number">7.3</span> Workflows</h2>
+<p>Create a workflow for this project in the following steps:</p>
+<ol type="1">
+<li><p>Under <strong>lec3</strong> folder, create a sub folder <strong>lec3_proj</strong></p></li>
+<li><p>Under <strong>lec3_proj</strong> folder, create two sub folders: <strong>code</strong> and <strong>data</strong></p></li>
+<li><p>Under <strong>data</strong> folder, create three sub folders: <strong>raw</strong>, <strong>temp</strong>, and <strong>cleaned</strong></p></li>
+</ol>
+<p>Your directories should look like this:</p>
+<ul>
+<li><strong>lec3–&gt;</strong>
+<ul>
+<li><strong>lec3_proj–&gt;</strong>
+<ul>
+<li><strong>code–&gt;</strong>
+<ul>
+<li><code>lec3_proj.Rmd</code></li>
+</ul></li>
+<li><strong>data–&gt;</strong>
+<ul>
+<li><strong>raw</strong></li>
+<li><strong>temp</strong></li>
+<li><strong>cleaned</strong></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="tasks" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="tasks"><span class="header-section-number">7.4</span> Tasks</h2>
+<ol start="0" type="1">
+<li><strong>Preparation</strong></li>
+</ol>
+<ul>
+<li>Download the <code>lec3_proj.Rmd</code> from GitHub into your code folder</li>
+<li>It is already setup for you with the questions.</li>
+<li>Code in the code chunk.</li>
+<li>Set up your working directory to the folder <code>~/lec3/lec3_proj/code/</code></li>
+</ul>
+<ol type="1">
+<li><strong>Data Exploration and Cleaning</strong>:
+<ul>
+<li>Generate an external dataset “client_data.csv” with the following code</li>
+</ul></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-3"><a href="#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of clients</span></span>
+<span id="cb85-4"><a href="#cb85-4" aria-hidden="true" tabindex="-1"></a>n_clients <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb85-5"><a href="#cb85-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-6"><a href="#cb85-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Generate 'name' column</span></span>
+<span id="cb85-7"><a href="#cb85-7" aria-hidden="true" tabindex="-1"></a>client_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">paste0</span>(<span class="st">"Client_"</span>, <span class="fu">seq</span>(<span class="dv">1</span>, n_clients)))</span>
+<span id="cb85-8"><a href="#cb85-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-9"><a href="#cb85-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Generate 'car_bought' column. Initially, just a random sample</span></span>
+<span id="cb85-10"><a href="#cb85-10" aria-hidden="true" tabindex="-1"></a>client_data<span class="sc">$</span>car_bought <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">rownames</span>(mtcars), n_clients, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb85-11"><a href="#cb85-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-12"><a href="#cb85-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Generate 'date_purchased' column</span></span>
+<span id="cb85-13"><a href="#cb85-13" aria-hidden="true" tabindex="-1"></a>client_data<span class="sc">$</span>date_purchased <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">'2015/01/01'</span>), <span class="fu">as.Date</span>(<span class="st">'2022/01/01'</span>), <span class="at">by=</span><span class="st">"day"</span>), n_clients, <span class="at">replace=</span><span class="cn">TRUE</span>)</span>
+<span id="cb85-14"><a href="#cb85-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-15"><a href="#cb85-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Generate 'income' column</span></span>
+<span id="cb85-16"><a href="#cb85-16" aria-hidden="true" tabindex="-1"></a>client_data<span class="sc">$</span>income <span class="ot">&lt;-</span> <span class="fu">runif</span>(n_clients, <span class="at">min=</span><span class="dv">30000</span>, <span class="at">max=</span><span class="dv">150000</span>)</span>
+<span id="cb85-17"><a href="#cb85-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-18"><a href="#cb85-18" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Ensure richer clients are more likely to buy cars with more horsepower</span></span>
+<span id="cb85-19"><a href="#cb85-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort mtcars by horsepower</span></span>
+<span id="cb85-20"><a href="#cb85-20" aria-hidden="true" tabindex="-1"></a>sorted_cars <span class="ot">&lt;-</span> <span class="fu">rownames</span>(mtcars[<span class="fu">order</span>(mtcars<span class="sc">$</span>hp), ])</span>
+<span id="cb85-21"><a href="#cb85-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-22"><a href="#cb85-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Divide clients into groups and assign cars based on sorted horsepower</span></span>
+<span id="cb85-23"><a href="#cb85-23" aria-hidden="true" tabindex="-1"></a>split_rows <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(n_clients <span class="sc">/</span> <span class="fu">length</span>(sorted_cars))</span>
+<span id="cb85-24"><a href="#cb85-24" aria-hidden="true" tabindex="-1"></a>client_data <span class="ot">&lt;-</span> client_data[<span class="fu">order</span>(<span class="sc">-</span>client_data<span class="sc">$</span>income), ] <span class="co"># sort by income</span></span>
+<span id="cb85-25"><a href="#cb85-25" aria-hidden="true" tabindex="-1"></a>client_data<span class="sc">$</span>car_bought <span class="ot">&lt;-</span> <span class="fu">rep</span>(sorted_cars, <span class="at">times =</span> split_rows)[<span class="dv">1</span><span class="sc">:</span>n_clients]</span>
+<span id="cb85-26"><a href="#cb85-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-27"><a href="#cb85-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the transformed client_data</span></span>
+<span id="cb85-28"><a href="#cb85-28" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(client_data)</span>
+<span id="cb85-29"><a href="#cb85-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb85-30"><a href="#cb85-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Write the data to a CSV</span></span>
+<span id="cb85-31"><a href="#cb85-31" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(client_data, <span class="st">"../data/raw/client_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ul>
+<li>Load the built-in dataset <code>mtcars</code>. - Create a column named <code>ID</code>, which is the same as the rownames.</li>
+<li>Identify missing values using <code>sum</code>, and <code>is.na()</code> function.</li>
+<li>Visualize and treat any outliers in the <code>mpg</code> column of the <code>mtcars</code> dataset. - Hint: using <code>boxplot()</code> function, and use <code>?boxplot()</code> to learn the syntax.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Combining Datasets</strong>:
+<ul>
+<li>Merge the datasets using <code>car_ID</code>, and <code>car_bought</code>.</li>
+<li>Use both <code>merge</code> from <code>base</code> and <code>join</code> from <code>dplyr</code> to combine. Discuss the differences.</li>
+<li>Note: the merged dataset should be named as:</li>
+<li><code>merged_data_base</code></li>
+<li><code>merged_data_dplyr</code></li>
+</ul></li>
+<li><strong>Data Reshaping</strong>:
+<ul>
+<li>Use <code>data.table</code> to reshape the merged data set.</li>
+<li>Save the reshaped data set into the <code>temp</code> folder.</li>
+<li>Create a summary table calculating the mean <code>mpg</code> for each unique value in <code>Car_ID</code>.</li>
+</ul></li>
+<li><strong>Data Standardization</strong>:
+<ul>
+<li>Standardize any date columns in <code>client_data.csv</code>.</li>
+<li>Purchased Date: <code>as.Date()</code></li>
+<li>Client’s name: get rid of <code>Client_</code> using <code>str_replace()</code></li>
+</ul></li>
+<li><strong>Unique Identifier Check</strong>:
+<ul>
+<li>Check if the <code>name</code> is a unique identifier using:</li>
+<li><code>isid()</code></li>
+<li><code>length(unique(DATA$UID))==nrow(DATA)</code></li>
+</ul></li>
+</ol>
+<p>5.5. <strong>Save and Use Cleaned Data to Proceed</strong> - Save the “merged_data_base” into the <code>cleaned</code> folder, named as: <code>merged_data_base_cleaned.csv</code></p>
+<ol start="6" type="1">
+<li><p><strong>Regression Analysis</strong>:</p>
+<ol type="a">
+<li><strong>Conducting the Regression</strong>:
+<ul>
+<li>Using the merged dataset, run a regression predicting <code>mpg</code> from another continuous variable.
+<ul>
+<li><code>mpg ~ wt</code></li>
+</ul></li>
+<li>Visualize the relationship between the chosen predictor and <code>mpg</code> using a scatter plot.
+<ul>
+<li><code>plot(merged_data_base$wt, merged_data_base$mpg, ...)</code></li>
+<li><code>abline()</code></li>
+</ul></li>
+</ul></li>
+<li><strong>Matrix Operations with Coefficients</strong>:
+<ul>
+<li>Extract the coefficients from the regression model and store them in a matrix.
+<ul>
+<li>new matrix: <code>matrix()</code></li>
+<li>extract coefficients: <code>coefficients(model)</code></li>
+</ul></li>
+<li>Create a 2x2 identity matrix.
+<ul>
+<li>Use this: <code>identity_matrix &lt;- diag(2)</code></li>
+</ul></li>
+<li>Use matrix multiplication (using <code>%*%</code>) to multiply the identity matrix by the coefficients matrix. The result will be the coefficients themselves.</li>
+</ul></li>
+<li><strong>Loops for Analysis (HARD: Don’t Do it for Now)</strong>:
+<ul>
+<li>Write a <code>for</code> loop that iterates over the column names of the merged dataset (excluding <code>mpg</code>). In each iteration, run a regression using <code>mpg</code> as the dependent variable and the current column as the independent variable. Store each coefficient in a vector.</li>
+<li>After the loop, visualize the coefficients using a bar plot to see the impact of each variable on <code>mpg</code>.</li>
+</ul></li>
+<li><strong>Interpretation</strong>:
+<ul>
+<li>Discuss the results. Which variables have the most substantial impact on <code>mpg</code>? Are the results consistent with expectations?</li>
+</ul></li>
+</ol></li>
+<li><p><strong>Control Structures and Custom Functions</strong>:</p></li>
+</ol>
+<ul>
+<li>Use a <code>for</code> loop to calculate the mean of each numeric column in the merged dataset. (HARD: Don’t Do it now). Hints:
+<ul>
+<li>To calculate the mean of each numeric column in a dataset:</li>
+<li>Initialization: Start by creating an empty numeric vector to store the mean values.</li>
+<li>Looping: Use a for loop to iterate over each column in the dataset.</li>
+<li>Conditional Check: Within the loop, check if the current column is numeric. You can use the is.numeric() function for this.</li>
+<li>Calculation: If the column is numeric, calculate its mean using the mean() function. Make sure to handle any missing values. Append this mean value to your storage vector.</li>
+<li>Naming: After the loop completes, name each element in your storage vector with the corresponding column name.</li>
+<li>Output: Finally, print the named vector to display the mean values.</li>
+</ul></li>
+<li>Write a custom function that uses <code>ifelse</code> to categorize <code>mpg</code> into “Low”, “Medium”, “High”. Apply this function to the dataset.
+<ul>
+<li>Hint: <code>ifelse(..., ifelse(,...))</code></li>
+</ul></li>
+<li>Use a <code>while</code> loop to find the first row in the merged dataset where <code>mpg</code> is above a certain threshold (e.g., 25).</li>
+</ul>
+<ol start="8" type="1">
+<li><strong>The <code>apply</code> Family</strong>:
+<ul>
+<li>Use <code>lapply</code> to calculate the range of each numeric column in the merged dataset. (HARD, don’t do it now)</li>
+<li>hint: <code>range_function &lt;- function(x) c(min=min(x, na.rm=TRUE), max=max(x, na.rm=TRUE))</code></li>
+<li>Use <code>sapply</code> to get the type of each column in the dataset.</li>
+<li>hint: <code>sapply(data, class)</code></li>
+</ul></li>
+<li><strong>Advanced Data Manipulation</strong>:
+<ul>
+<li>Use <code>tidyverse</code> functions to filter rows, select columns, and arrange the dataset.</li>
+<li>filter: mpg &gt; 20</li>
+<li>select: mpg, wt, gear</li>
+<li>arrange: desc(wt)</li>
+<li>Use <code>data.table</code> to efficiently modify the dataset in place.</li>
+</ul></li>
+</ol>
+</section>
+<section id="challenging-question" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="challenging-question"><span class="header-section-number">7.5</span> Challenging Question</h2>
+<ol start="10" type="1">
+<li><strong>Integrative Analysis</strong>:</li>
+</ol>
+<ul>
+<li>Create a new column in the merged dataset that calculates the age of the car (assumes everyone bought a new car on the purchase_date). Use any necessary libraries/packages.</li>
+<li>Write a custom function that, given a column name, returns a list containing the mean, median, and standard deviation. Apply this to multiple columns using the <code>sapply</code> function.</li>
+<li>Use control structures to find the average <code>mpg</code> for cars that are above and below the median weight. Compare the results and provide an interpretation.</li>
+</ul>
+</section>
+<section id="solution" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="solution"><span class="header-section-number">7.6</span> Solution</h2>
+<p>You can find the solution <a href="https://github.com/lfr00154/R-review2023/blob/235c337609a8ffd8f5b5accb70dfd6c7b5216f89/lec3/lec3_projsol.Rmd">here</a>.</p>
+<hr>
+</section>
+</section>
+<section id="appendix" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Appendix</h1>
+<section id="gsub" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="gsub"><span class="header-section-number">8.1</span> <code>gsub</code></h2>
+<p>The <code>gsub()</code> function is part of base R, and it’s a powerful tool for replacing patterns in strings. <code>gsub()</code> stands for “global substitution”. It searches for all matches of a pattern in a string and replaces them with a specified replacement string.</p>
+<section id="syntax" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="syntax"><span class="header-section-number">8.1.1</span> Syntax</h3>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gsub</span>(pattern, replacement, x, <span class="at">ignore.case =</span> <span class="cn">FALSE</span>, <span class="at">perl =</span> <span class="cn">FALSE</span>, <span class="at">fixed =</span> <span class="cn">FALSE</span>, <span class="at">useBytes =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<ul>
+<li><code>pattern</code>: The pattern to search for.</li>
+<li><code>replacement</code>: The string to replace the pattern with.</li>
+<li><code>x</code>: The input string.</li>
+<li><code>ignore.case</code>: Should the match be case-insensitive?</li>
+<li><code>perl</code>: Should Perl-compatible regex be used?</li>
+<li><code>fixed</code>: If TRUE, pattern is a string to be matched as is (turns off special characters).</li>
+<li><code>useBytes</code>: Should bytes be used for matching (relevant for non-ASCII strings)?</li>
+</ul>
+</section>
+<section id="examples" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="examples"><span class="header-section-number">8.1.2</span> Examples</h3>
+<ol type="1">
+<li><strong>Basic Substitution</strong> Replacing “cat” with “dog”:</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"The cat sat on the mat."</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>new_text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, text)</span>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(new_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The dog sat on the mat."</code></pre>
+</div>
+</div>
+<ol start="2" type="1">
+<li><strong>Removing Special Characters</strong> Here’s an example using <code>gsub()</code> to remove special characters:</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"Hello, world! This is a test. #Test123"</span></span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>cleaned_text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[^[:alnum:][:space:]]"</span>, <span class="st">""</span>, text)</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cleaned_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello world This is a test Test123"</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li><strong>Case-Insensitive Replacement</strong> Replacing “world” with “R”, ignoring case:</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"Hello World"</span></span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>new_text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"world"</span>, <span class="st">"R"</span>, text, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(new_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello R"</code></pre>
+</div>
+</div>
+<ol start="4" type="1">
+<li><strong>Replace Multiple Spaces with Single Space</strong></li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="st">"This   has  multiple    spaces."</span></span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a>new_text <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>, <span class="st">" "</span>, text)</span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(new_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "This has multiple spaces."</code></pre>
+</div>
+</div>
+<hr>
+<p><code>gsub()</code> is one of the primary string manipulation functions in base R and is often used in scenarios where you don’t want to or can’t rely on external packages.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="reference" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Reference</h1>
+<ul>
+<li><p><a href="https://cran.r-project.org/doc/manuals/R-intro.pdf">An Introduction to R</a></p></li>
+<li><p><a href="https://bookdown.org/yih_huynh/Guide-to-R-Book/">R for Graduate Student</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></p></li>
+<li><p><a href="https://www.econometrics-with-r.org/index.html">Introduction to Econometrics with R</a></p></li>
+<li><p><a href="https://libguides.bates.edu/r/r-for-economics">R for Economics</a></p></li>
+<li><p><a href="https://rkabacoff.github.io/datavis/datavis.pdf">Data Visualization with R</a></p></li>
+<li><p>Dr.&nbsp;Qingxiao Li’s notes for R-Review 2020</p></li>
+<li><p>Rodrigo Franco’s notes for R-Review 2021</p></li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Lifeng Ren</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lfr00154/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

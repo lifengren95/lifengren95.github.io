@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Lifeng Ren">
-<meta name="dcterms.date" content="2023-08-14">
+<meta name="dcterms.date" content="2023-09-07">
 
-<title>Lifeng Ren - Lecture 0: R-Review-2023</title>
+<title>Lifeng Ren - Lecture 0</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,9 +19,10 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -48,43 +49,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -120,16 +91,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -140,71 +113,164 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">Lifeng Ren</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About me</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./lec0.html" aria-current="page">
- <span class="menu-text">Lecture 0: R-Review-2023</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching">    
+        <li class="dropdown-header">R-Review-2023</li>
+        <li>
+    <a class="dropdown-item" href="./lec0.html" rel="" target="">
+ <span class="dropdown-text">Lecture 0</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./lec1.html">
- <span class="menu-text">Lecture 1: R-Review-2023</span></a>
+        <li>
+    <a class="dropdown-item" href="./lec1.html" rel="" target="">
+ <span class="dropdown-text">Lecture 1</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./lec2.html" rel="" target="">
+ <span class="dropdown-text">Lecture 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec3.html" rel="" target="">
+ <span class="dropdown-text">Lecture 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec4.html" rel="" target="">
+ <span class="dropdown-text">Lecture 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./lec5.html" rel="" target="">
+ <span class="dropdown-text">Lecture 5</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./lec0.html">R-Review-2023</a></li><li class="breadcrumb-item"><a href="./lec0.html">Lecture 0</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">R-Review-2023</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec0.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 0</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lec5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 5</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up">Set Up</a>
   <ul class="collapse">
-  <li><a href="#install-r-and-rstudio" id="toc-install-r-and-rstudio" class="nav-link" data-scroll-target="#install-r-and-rstudio">Install R and Rstudio</a></li>
-  <li><a href="#what-is-r-and-rstudio" id="toc-what-is-r-and-rstudio" class="nav-link" data-scroll-target="#what-is-r-and-rstudio">What is R and Rstudio</a></li>
-  <li><a href="#go-over-the-interface-of-rstudio" id="toc-go-over-the-interface-of-rstudio" class="nav-link" data-scroll-target="#go-over-the-interface-of-rstudio">Go over the Interface of Rstudio</a></li>
-  </ul></li>
-  <li><a href="#code-in-r" id="toc-code-in-r" class="nav-link" data-scroll-target="#code-in-r">Code in R</a>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link active" data-scroll-target="#set-up"><span class="header-section-number">1</span> Set Up</a>
   <ul class="collapse">
-  <li><a href="#r-script" id="toc-r-script" class="nav-link" data-scroll-target="#r-script">R script</a></li>
-  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R Markdown</a></li>
-  <li><a href="#coding-style" id="toc-coding-style" class="nav-link" data-scroll-target="#coding-style">Coding Style</a>
+  <li><a href="#install-r-and-rstudio" id="toc-install-r-and-rstudio" class="nav-link" data-scroll-target="#install-r-and-rstudio"><span class="header-section-number">1.1</span> Install R and Rstudio</a></li>
+  <li><a href="#what-is-r-and-rstudio" id="toc-what-is-r-and-rstudio" class="nav-link" data-scroll-target="#what-is-r-and-rstudio"><span class="header-section-number">1.2</span> What is R and Rstudio</a></li>
+  <li><a href="#go-over-the-interface-of-rstudio" id="toc-go-over-the-interface-of-rstudio" class="nav-link" data-scroll-target="#go-over-the-interface-of-rstudio"><span class="header-section-number">1.3</span> Go over the Interface of Rstudio</a></li>
+  </ul></li>
+  <li><a href="#code-in-r" id="toc-code-in-r" class="nav-link" data-scroll-target="#code-in-r"><span class="header-section-number">2</span> Code in R</a>
   <ul class="collapse">
-  <li><a href="#naming" id="toc-naming" class="nav-link" data-scroll-target="#naming">Naming</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  <li><a href="#most-used-built-in-symbols-and-command" id="toc-most-used-built-in-symbols-and-command" class="nav-link" data-scroll-target="#most-used-built-in-symbols-and-command">Most used Built-in Symbols and Command</a></li>
+  <li><a href="#r-script" id="toc-r-script" class="nav-link" data-scroll-target="#r-script"><span class="header-section-number">2.1</span> R script</a></li>
+  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown"><span class="header-section-number">2.2</span> R Markdown</a></li>
+  <li><a href="#coding-style" id="toc-coding-style" class="nav-link" data-scroll-target="#coding-style"><span class="header-section-number">2.3</span> Coding Style</a></li>
+  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise"><span class="header-section-number">2.4</span> In-class exercise</a></li>
   </ul></li>
-  <li><a href="#in-class-exercise" id="toc-in-class-exercise" class="nav-link" data-scroll-target="#in-class-exercise">In-class exercise</a></li>
-  </ul></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">3</span> Summary</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">4</span> Reference</a></li>
   </ul>
 </nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lecture 0: R-Review-2023</h1>
+<h1 class="title">Lecture 0</h1>
 </div>
 
 
@@ -221,7 +287,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 14, 2023</p>
+      <p class="date">September 7, 2023</p>
     </div>
   </div>
   
@@ -231,59 +297,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="set-up" class="level1">
-<h1>Set Up</h1>
+<section id="set-up" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Set Up</h1>
 <p>Let us firstly set up our R programming environment and have an overview of Rstudio.</p>
-<section id="install-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="install-r-and-rstudio">Install R and Rstudio</h2>
+<section id="install-r-and-rstudio" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="install-r-and-rstudio"><span class="header-section-number">1.1</span> Install R and Rstudio</h2>
 <p>Please follow the instruction of this <a href="https://posit.co/download/rstudio-desktop/">link</a> to download and install R and Rstudio.</p>
 </section>
-<section id="what-is-r-and-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-r-and-rstudio">What is R and Rstudio</h2>
+<section id="what-is-r-and-rstudio" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="what-is-r-and-rstudio"><span class="header-section-number">1.2</span> What is R and Rstudio</h2>
 <ul>
 <li>R is a language and environment for statistical computing and graphics.</li>
 <li>RStudio is an integrated development environment for R.</li>
 </ul>
 </section>
-<section id="go-over-the-interface-of-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="go-over-the-interface-of-rstudio">Go over the Interface of Rstudio</h2>
+<section id="go-over-the-interface-of-rstudio" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="go-over-the-interface-of-rstudio"><span class="header-section-number">1.3</span> Go over the Interface of Rstudio</h2>
 <p>There are four main windows in Rstudio.</p>
 <ul>
 <li>The <code>Console</code> window</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1oCS5ET2HkN95gDVPb286P5Xnx54CM0_3.png" class="img-fluid" style="width:50.0%"></p>
-</div>
-</div>
+<p><img src="https://github.com/lfr00154/R-review2023/blob/c2903d9ddaccadc16bfec1dae7370294cc838bac/img/lec0/console_window.png" class="img-fluid"></p>
 <ul>
 <li>The <code>Source</code> window: Here is place we normally write our code.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1eZqu_8ALnKUPd884ImZaxJI51oaLCShM.png" class="img-fluid" style="width:50.0%"></p>
-</div>
-</div>
+<p><img src="https://github.com/lfr00154/R-review2023/blob/c2903d9ddaccadc16bfec1dae7370294cc838bac/img/lec0/source_window.png" class="img-fluid"></p>
 <ul>
 <li>The <code>Environment / History / Connections / Tutorial</code> window: Right now it is empty, because we have not loaded any data yet. Here is the place, we can see some data frames, functions, and vectors.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1JBkdPzxnAx7jEdzdib95tpkpwvzUSUkd.png" class="img-fluid" style="width:50.0%"></p>
-</div>
-</div>
+<p><img src="https://github.com/lfr00154/R-review2023/blob/c2903d9ddaccadc16bfec1dae7370294cc838bac/img/lec0/envdata_window.png" class="img-fluid"></p>
 <ul>
 <li>The <code>Files / Plots / Packages / Help / Viewer</code> window: You can see your file path, plots, etc. in this window.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1hSPAOECz8k2Nlae6lgOZyUtF6-iBs5aI.png" class="img-fluid" style="width:50.0%"></p>
-</div>
-</div>
+<p><img src="https://github.com/lfr00154/R-review2023/blob/c2903d9ddaccadc16bfec1dae7370294cc838bac/img/lec0/fileview_window.png" class="img-fluid" style="width:50.0%"></p>
 </section>
 </section>
-<section id="code-in-r" class="level1">
-<h1>Code in R</h1>
+<section id="code-in-r" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Code in R</h1>
 <p>We will talk more about coding in R in the next few days, and there are lot of things to be care of for any programming language, such us:</p>
 <ul>
 <li><p>Workflows set up</p></li>
@@ -293,10 +343,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Each single topic worth a ton of time to study. However, I will only talk about some basics of each part. And I really wish you can code like a pro.</p>
 <p>So, let us get familiar with the <code>R Script</code> and <code>R Markdown</code> first, and go over some coding conventions.</p>
-<section id="r-script" class="level2">
-<h2 class="anchored" data-anchor-id="r-script">R script</h2>
+<section id="r-script" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="r-script"><span class="header-section-number">2.1</span> R script</h2>
 <p>You always need yourself and your collaborator know what is your script about. So, please define some basic information for your <code>R script</code>. The following is an example I use.</p>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#____________________________</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  Script Information----</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#____________________________</span></span>
@@ -320,6 +372,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="do">##   </span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="do">## Version Notes: Initial Efforts</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="do">## ___________________________</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>You can create RStudio headers (that can be tracked by Rstudio) using the</p>
 <ul>
@@ -328,6 +381,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>If you test and try a little bit you would find that R can track and of the following format: <code>#</code>+ space + <code>your section name</code> + <code>----</code> (four dashes).</p>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a default R section -------------------------------</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#____________________________________________   This is `underscore`</span></span>
@@ -337,10 +392,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#__________________________________________</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  Double hash tag will bold the words----   </span></span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#__________________________________________</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
-<section id="r-markdown" class="level2">
-<h2 class="anchored" data-anchor-id="r-markdown">R Markdown</h2>
+<section id="r-markdown" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="r-markdown"><span class="header-section-number">2.2</span> R Markdown</h2>
 <p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. <code>.Rmd</code> is the abbreviation for <code>R Markdown</code> file and for more a complete <code>R markdown</code> reference, I personally recommend you this <a href="https://bookdown.org/yihui/rmarkdown/">user guide</a>, and official documentation on <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a> to know the full picture of R markdown.</p>
 <ul>
 <li>Short note: For the students taking APEC8211 - APEC8212, you need to hand in the Homework in a typed format. So, learning code in <code>Rmd</code> would be good to save you time.</li>
@@ -350,6 +406,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>First, you have the opportunity to edit your page style and header, which is called a <a href="https://monashdatafluency.github.io/r-rep-res/yaml-header.html">YAML header</a>, the following is an example of my own <code>YAML</code> header for this class.</li>
 </ul>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Lecture 1: R-Review-2023"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Lifeng Ren"</span></span>
@@ -370,6 +428,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    fig_caption<span class="sc">:</span> true</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    code_folding<span class="sc">:</span> hide</span>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>In the <code>Rmd</code> documentation, we have two main things:</p>
 <ul>
@@ -386,14 +445,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>For other Markdown coding documentation, please refer to: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></li>
 </ul></li>
 <li><p>Code Chunk (mainly should be R, but can also be customized)</p>
-<p>The code chunk normally starts with <code>r</code>, and follows by the chunk name you defined, and then put the chunk environment after it. For example:</p>
-<p>::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="st">```</span><span class="at"> {r chunkexmaple, eval=FALSE}</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">summary(cars)</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="st">```</span>  <span class="co"># Example </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p></li>
+<p>The code chunk normally starts with <code>r</code>, and follows by the chunk name you defined, and then put the chunk environment after it. For example:</p></li>
 </ul>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>  <span class="st">```</span><span class="at">{r, chunkexample, eval=FALSE}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">    summary(cars)</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="st">```</span> <span class="co">#Example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p>According to the online documentation of <a href="https://rmarkdown.rstudio.com/lesson-3.html">R Markdown</a>:</p>
 <ul>
 <li><p>Using <code>include = FALSE</code> hides both the code and its output in the final document. However, R Markdown still executes the code in the chunk, making the results accessible to subsequent chunks.</p></li>
@@ -404,16 +465,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>To skip the execution of a particular code chunk altogether, use <code>eval = FALSE</code>.</p></li>
 <li><p>You can also use <code>knitr::opts_chunk$set(ANY OPTIONS ABOVE)</code> like below to set a global environment for all code chunks like this:</p>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div></li>
 </ul>
 <p>More coding details in <code>Rmd</code> should be reviewed using the source code I provided.</p>
 </section>
-<section id="coding-style" class="level2">
-<h2 class="anchored" data-anchor-id="coding-style">Coding Style</h2>
+<section id="coding-style" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="coding-style"><span class="header-section-number">2.3</span> Coding Style</h2>
 <p>We are not professional programmer, but coding habitat is super important. Here are some most important parts I think you should be careful of.</p>
-<section id="naming" class="level3">
-<h3 class="anchored" data-anchor-id="naming">Naming</h3>
+<section id="naming" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="naming"><span class="header-section-number">2.3.1</span> Naming</h3>
 <ul>
 <li><p>Please name your variables in either the following way, and being consistent:</p>
 <ul>
@@ -425,44 +489,47 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Do not include illegal characters like: <code>2023/%badname</code></p></li>
 </ul>
 </section>
-<section id="comments" class="level3">
-<h3 class="anchored" data-anchor-id="comments">Comments</h3>
+<section id="comments" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="comments"><span class="header-section-number">2.3.2</span> Comments</h3>
 <ul>
 <li><p>Remind yourself and other collaborators with comments in addition to headers.</p></li>
-<li><p>For example:</p>
-<p>::: {.cell}</p>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#__________________________________________</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">##  Comments Your Code is Important----   </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#__________________________________________</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="co"># You might not need to generate comments for a simple function</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># A function to generate the Fibonacci sequence</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>fibonacci <span class="ot">&lt;-</span> <span class="cf">function</span>(n) { <span class="co"># but for a complex function you need more comments</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">0</span>) {</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">integer</span>(<span class="dv">0</span>))  <span class="co"># return an empty integer vector for non-positive n</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">1</span>) {</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="dv">0</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">2</span>) {</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>))</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    fib_sequence <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">3</span><span class="sc">:</span>n) {</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>      next_element <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">tail</span>(fib_sequence, <span class="dv">2</span>))</span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      fib_sequence <span class="ot">&lt;-</span> <span class="fu">c</span>(fib_sequence, next_element)</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(fib_sequence)</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the first 10 numbers of the Fibonacci sequence</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">fibonacci</span>(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>:::</p></li>
+<li><p>For example:</p></li>
 </ul>
+<div class="cell" data-lable="comments_example">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    <span class="co">#__________________________________________</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="do">##  Comments Your Code is Important----   </span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#__________________________________________</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mean</span>(x) <span class="co"># You might not need to generate comments for a simple function</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A function to generate the Fibonacci sequence</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    fibonacci <span class="ot">&lt;-</span> <span class="cf">function</span>(n) { <span class="co"># but for a complex function you need more comments</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">0</span>) {</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(<span class="fu">integer</span>(<span class="dv">0</span>))  <span class="co"># return an empty integer vector for non-positive n</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">1</span>) {</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(<span class="dv">0</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">2</span>) {</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="fu">return</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        fib_sequence <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">3</span><span class="sc">:</span>n) {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>          next_element <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">tail</span>(fib_sequence, <span class="dv">2</span>))</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>          fib_sequence <span class="ot">&lt;-</span> <span class="fu">c</span>(fib_sequence, next_element)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(fib_sequence)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print the first 10 numbers of the Fibonacci sequence</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(<span class="fu">fibonacci</span>(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="most-used-built-in-symbols-and-command" class="level3">
-<h3 class="anchored" data-anchor-id="most-used-built-in-symbols-and-command">Most used Built-in Symbols and Command</h3>
+<section id="most-used-built-in-symbols-and-command" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="most-used-built-in-symbols-and-command"><span class="header-section-number">2.3.3</span> Most used Built-in Symbols and Command</h3>
 <table class="table">
 <colgroup>
 <col style="width: 16%">
@@ -552,8 +619,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>We will see them more often in the next couple sessions.</p>
 </section>
 </section>
-<section id="in-class-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="in-class-exercise">In-class exercise</h2>
+<section id="in-class-exercise" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="in-class-exercise"><span class="header-section-number">2.4</span> In-class exercise</h2>
 <p>Now, let us go to <code>Rstudio</code> and play with what we have learned.</p>
 <ol type="1">
 <li>Download the files</li>
@@ -569,7 +636,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>In the <code>source</code> window, type the following code and select the sentence and click on <code>Run</code></p>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hello World!"</code></pre>
 </div>
@@ -577,20 +647,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Type the same thing in the <code>Console</code> window, and hit <code>enter</code>.</p></li>
 <li><p>Get Help with any functions like <code>print</code>: <code>?print()</code></p>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>  ?<span class="fu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div></li>
 </ul>
 <ol start="3" type="1">
-<li><p>Assign a <code>char</code> value to <code>hello</code> using the following code and see the change in the <code>envrionemt</code> window. Then, print out <code>hello</code>.</p>
-<p>::: {.cell}</p>
+<li>Assign a <code>char</code> value to <code>hello</code> using the following code and see the change in the <code>envrionemt</code> window. Then, print out <code>hello</code>.</li>
+</ol>
+<div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>  hello <span class="ot">&lt;-</span> <span class="st">"Hello World!"</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(hello)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>::: {.cell-output .cell-output-stdout} <code>[1] "Hello World!"</code> ::: :::</p></li>
-</ol>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello World!"</code></pre>
+</div>
+</div>
 </section>
 </section>
-<section id="summary" class="level1">
-<h1>Summary</h1>
+<section id="summary" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Summary</h1>
 <p>In this section, we briefly go through Rstudio with some coding rules/conventions and get a better sense of the Rstudio Interface. After this section, make sure you are comfortable with the following points:</p>
 <ul>
 <li>Interface about Rstudio
@@ -606,10 +685,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul>
 </section>
-<section id="reference" class="level1">
-<h1>Reference</h1>
+<section id="reference" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Reference</h1>
 <ul>
-<li><p>Section 3 of <a href="https://bookdown.org/yih_huynh/Guide-to-R-Book/rstudio-set-up.html"><code>R for Graduate Students</code></a></p></li>
+<li><p><a href="https://cran.r-project.org/doc/manuals/R-intro.pdf">An Introduction to R</a></p></li>
+<li><p><a href="https://bookdown.org/yih_huynh/Guide-to-R-Book/">R for Graduate Student</a></p></li>
+<li><p><a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a></p></li>
+<li><p><a href="https://www.econometrics-with-r.org/index.html">Introduction to Econometrics with R</a></p></li>
+<li><p><a href="https://libguides.bates.edu/r/r-for-economics">R for Economics</a></p></li>
+<li><p><a href="https://rkabacoff.github.io/datavis/datavis.pdf">Data Visualization with R</a></p></li>
 <li><p>Dr.&nbsp;Qingxiao Li’s notes for R-Review 2020</p></li>
 <li><p>Rodrigo Franco’s notes for R-Review 2021</p></li>
 </ul>
@@ -617,7 +701,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -645,9 +729,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -712,6 +810,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -752,6 +936,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Lifeng Ren</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lfr00154/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
 
 
 
