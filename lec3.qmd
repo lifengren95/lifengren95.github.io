@@ -272,9 +272,7 @@ list(
 
 In both the `dplyr` and base R results, we can observe that where there's no match for a record in the left table, `NA` values are filled in for columns from the right table. Which should be similar to the `m:1` results from STATA's picture below. (NOT EXACT THE SAME BUT SAME IDEA)
 
-```{r echo=FALSE, out.width='50%'}
-knitr::include_graphics("https://drive.google.com/uc?export=view&id=1GRP7F4y1kN8w3dU97Y3xVlDIKyoHu1aL")
-```
+![](img/lec3/Stata_merge.png){width=50%}
 
 ---
 

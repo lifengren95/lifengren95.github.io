@@ -622,11 +622,7 @@ $base_teachers_base
 </div>
 <p><strong>NOTES:</strong></p>
 <p>In both the <code>dplyr</code> and base R results, we can observe that where there’s no match for a record in the left table, <code>NA</code> values are filled in for columns from the right table. Which should be similar to the <code>m:1</code> results from STATA’s picture below. (NOT EXACT THE SAME BUT SAME IDEA)</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="https://drive.google.com/uc?export=view&amp;id=1GRP7F4y1kN8w3dU97Y3xVlDIKyoHu1aL.png" class="img-fluid" style="width:50.0%"></p>
-</div>
-</div>
+<p><img src="img/lec3/Stata_merge.png" class="img-fluid" style="width:50.0%"></p>
 <hr>
 </section>
 </section>
@@ -1104,7 +1100,7 @@ There are this many total rows in the data:
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(mtcars<span class="sc">$</span>mpg, <span class="at">main=</span><span class="st">"Boxplot of MPG"</span>, <span class="at">ylab=</span><span class="st">"Miles Per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Points outside the “whiskers” of the boxplot could be potential outliers.</p>
@@ -1146,7 +1142,7 @@ There are this many total rows in the data:
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>    <span class="fu">hist</span>(mtcars<span class="sc">$</span>mpg, <span class="at">main=</span><span class="st">"Histogram of MPG"</span>, <span class="at">xlab=</span><span class="st">"Miles Per Gallon"</span>, <span class="at">col=</span><span class="st">"lightblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -1158,7 +1154,7 @@ There are this many total rows in the data:
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pairs</span>(mtcars[, <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">main=</span><span class="st">"Scatterplot Matrix"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <ol start="3" type="1">
@@ -1172,7 +1168,7 @@ There are this many total rows in the data:
 <span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Density Plot of MPG"</span>, <span class="at">x=</span><span class="st">"Miles Per Gallon"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>By conducting these preliminary checks, you ensure that your data is ready for deeper analysis, and any insights or results derived are more likely to be reliable.</p>
@@ -1337,7 +1333,7 @@ wt          -5.344472   0.559101 -9.559044 1.293959e-10</code></pre>
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -1355,7 +1351,7 @@ wt          -5.344472   0.559101 -9.559044 1.293959e-10</code></pre>
 <span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Residuals vs. Fitted Values"</span>, <span class="at">x=</span><span class="st">"Fitted Values"</span>, <span class="at">y=</span><span class="st">"Residuals"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="lec3_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+<p><img src="lec3_files/figure-html/unnamed-chunk-37-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <hr>
