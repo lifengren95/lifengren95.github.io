@@ -10,6 +10,7 @@ website:
         text: Home
       - about.qmd
       - sidebar:teaching
+      - sidebar:presentation
 
   sidebar:
     - id: teaching
@@ -19,7 +20,7 @@ website:
       collapse-level: 2
       search: true
       contents:
-        - section: "R-Review-2023"
+        - section: "R Review 2023"
           contents:
             - href: lec0.qmd
             - href: lec1.qmd
@@ -27,6 +28,17 @@ website:
             - href: lec3.qmd
             - href: lec4.qmd
             - href: lec5.qmd
+    - id: presentation
+      title: Presentation
+      style: "docked"
+      background: light
+      collapse-level: 2
+      search: true
+      contents:
+        - section: "APEC Skill Sessions"
+          contents:
+            - href: quarto_notebook.qmd
+
   back-to-top-navigation: true
   page-footer: 
     left: "Copyright 2023, Lifeng Ren" 

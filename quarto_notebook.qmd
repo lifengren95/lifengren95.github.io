@@ -1,0 +1,289 @@
+---
+title: "Introduction to Quarto"
+author: "Lifeng Ren"
+date: "09/13/2023"
+format: 
+    html: 
+        toc: true
+        number-sections: true
+    pdf:
+        toc: true
+        number-sections: true
+        colorlinks: true
+execute:
+  freeze: auto  # re-render only when source changes
+---
+
+# Overview
+
+-   Today, I am going to go over a software called `Quarto` that is developed by the same team that developed `R Markdown`. As you can guess for now, they are very similar with slight difference.
+-   In this session, I am hoping to go over:
+    -   What is `Quarto`, and why we should use it
+    -   How to use `Quarto` to generate:
+        -   `HTML` documents
+        -   `Reveal.js` slides
+        -   Quarto website with `GitHub Pages`
+
+## What is Quarto
+
+-   Quarto is an open-source scientific and technical publishing system to create dynamic content with `Python`, `R`, `Stata`, `Julia` with engines `Jupyter`, `Knitr`, and `Observable`.
+
+-   Just like `R Markdown`, `Quarto` uses `PanDoc` to convert `Markdown` to `LaTex`, `HTML`, `PDF`, `Word`, etc.
+
+-   In short: One document (`.qmd`), multiple languages, multiple outputs.
+
+## Why Quarto?
+
+-   To keep your code and document in one place and make it reproducible. Most importantly, to make it open-sourced and shareable.
+
+-   What if I am already using `R Markdown`, do I need to switch?
+
+    -   Based on your needs. There are many discussions on this, and I am providing some blogs and articles that you can read to make your own decision.
+        -   [With Quarto Coming, is R Markdown Going Away? No.](https://yihui.org/en/2022/04/quarto-r-markdown/)
+        -   [Notes on Changing from Rmarkdown/Bookdown to Quarto](https://www.njtierney.com/post/2022/04/11/rmd-to-qmd/)
+
+## Quarto Preview
+
+@fig-airquality further explores the impact of temperature on ozone level.
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperature and ozone level."
+#| warning: false
+
+library(ggplot2)
+
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess"
+)
+```
+
+## Install Quarto
+
+To play with `Quarto`, you should firstly download Quarto from [here](https://quarto.org/docs/get-started/), install it, and choose your favorite IDE to write `Quarto` documents. I am using `VS Code` with `Quarto` extension installed to show the demo today.
+
+-   If you are using `R Studio`, once you installed `Quarto`, you do not need any extra steps. Just restart your `R Studio` and you are good to go.
+
+-   In the `VS Code` IDE, you need to install `Quarto` extension in the `Extensions` marketplace.
+
+    ![](img/quarto_extension.png){width="50%"}
+
+# Generate your first `Quarto` document
+
+As I mentioned above, `Quarto` can support many output formats. Today, I am going to show you how to generate `HTML` documents, `Reveal.js` slides, and `Quarto` website with `GitHub Pages`. For a full list of reference, please visit this page: <https://quarto.org/docs/guide/>. 
+
+## Quarto Notebook
+
+-   Quarto provides a `Notebook Editor` and a `Visual Editor` mode to write the document. (DEMO)
+
+    ![](img/notebook_editor.png){width="50%"}
+    ![](img/visual_editor.png){width="50%"}
+
+-   It can be rendered into different type of outputs. (DEMO for `HTML`, `PDF`, `Word`)
+    - For now, I will keep rendering it into `HTML` format.
+
+- Almost all syntax are the same for `R Markdown` and `Quarto` because they are based on `Markdown`. So, I won't go over the syntax a lot today. You can find more information here: <https://quarto.org/docs/authoring/markdown-basics.html>
+
+- `YAML` header has some differences. Here is an example:
+
+| RMarkdown        | Quarto   |
+|------------------|----------|
+| output: html_document | format: html |
+| output: pdf_document  | format: pdf  |
+| output: word_document | format: docx |
+| `underscore`: `_` (e.g.: `number_sections: true`)| `dash`: `-` (e.g.: `number-sections: true`)|
+|Rerender all the code| Rerender only when source changes|
+
+New Features in `Quarto`'s `YAML` header:
+```{r}
+#| eval: false 
+execute:
+  freeze: auto  # re-render only when source changes
+```
+
+- Code Chunk options are changing
+
+::: {.panel-tabset}
+
+### RMarkdown
+
+```{r}
+#| eval: false
+    ```{r setup, include=FALSE}
+    ```
+```
+
+### Quarto
+
+```{r}
+#| eval: false
+    ```{r}
+    #| label: "setup"
+    #| include: false
+    ```
+```
+
+:::
+
+
+## Weave `Stata`, `R`, and `Python` into one Document
+
+### Run Stata Code in Python and R
+
+Since `Quarto` can choose the corresponding language engine based on the code chunk's language, we can run `Stata` code in `Python` and `R` code chunks to weave all three languages coding into one document.
+
+::: panel-tabset
+#### Run Stata in `Python`
+
+**Step 1:** Install `pystata`, and `stata_setup` package using `pip` or `conda`, or `mamba`, etc. (Here is an example using `pip`)
+
+```{python}
+#| label: install
+#| eval: false
+pip install pystata
+pip install stata_setup
+```
+
+**Step 2:** Point the `stata_setup` to your Stata installation directory
+
+-   Open Stata, and type `display c(sysdir_stata)` in the command window.
+-   Copy the output and paste it in the `stata_setup.config()` function like below.
+
+```{python}
+#| label: modelling
+#| echo: true
+#| message: false
+#| code-line-numbers: "145"
+import stata_setup
+stata_setup.config('/Applications/Stata/', 'mp')
+```
+
+**Step 3:** Run Stata code in Python
+
+```{python}
+#| label: test
+#| echo: true
+#| message: false
+
+from pystata import stata
+
+stata.run('''
+sysuse auto, clear
+summarize
+reg mpg price i.foreign
+ereturn list
+''')
+```
+
+#### Run Stata in `R`
+
+```{r}
+library(Statamarkdown)
+stataexe <- "/Applications/Stata/StataMP.app/Contents/MacOS/StataMP"
+knitr::opts_chunk$set(engine.path=list(stata=stataexe))
+```
+
+```{stata}
+sysuse auto, clear
+summarize
+reg mpg price i.foreign
+ereturn list
+```
+:::
+
+# `Reveal.js` slides
+
+I normally has a document first and then copy and paste it into a new `Quarto` document to generate `Reveal.js` slides. But you can also just change a few things in the `YAML` header to generate `Reveal.js` slides.
+
+The key thing we need to modify is the `format` in the `YAML` header. Here is an example:
+
+```{r}
+#| eval: false
+---
+title: "Introduction to Quarto"
+author: "Lifeng Ren"
+date: "09-13-2023"
+format: 
+    revealjs: # revealjs slides
+        theme: default # default, beige, sky, night, serif, simple, solarized
+        chalkboard: true # add a chalkboard to the slides
+        scrollable: true # make the slides scrollable: this is useful for long slides (or sometimes you directly change the yaml header from the html document)
+---
+```
+
+## Key Features
+
+- Incremental Lists
+
+```{r}
+#| eval: false
+## Slide 1
+::: {.incremental}
+-   Item 1
+-   Item 2
+:::
+```
+
+- Multiple Columns
+
+```{r}
+#| eval: false
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+```
+
+- Code Highlight
+
+Suppose we would like to highlight the following code
+
+  - `ax.plot(theta, r)`
+  - `x.grid(True)`
+
+We could use the following code to highlight the code in a presentation
+
+```{r}
+#| eval: false
+    ```{.python code-line-numbers="7,9"}
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    r = np.arange(0, 2, 0.01)
+    theta = 2 * np.pi * r
+    fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+    ax.plot(theta, r)
+    ax.set_rticks([0.5, 1, 1.5, 2])
+    x.grid(True)
+    plt.show()
+    ```
+```
+
+
+# Quarto website with `GitHub Pages`
+
+## Personal Website (DEMO)
+
+In order to generate a personal website hosted by GitHub, we need to do the following things:
+
+- A github account
+
+- Create a new repository with the name of `username.github.io` (e.g.: `lfr00154.github.io`)
+  - If you already have your personal website and you can add create a repository with a different name and link this repository to your personal website. For example, I would use `quarto_demosite` as the repository name.
+
+- Create a new `Quarto` website project.
+  - In the `_quarto.yml` file, add `output-dir: docs` under the `project` section. 
+  - Render this file and there shall be a local static website shown on your IDE/browser.
+
+- Go to GitHub and upload the whole project to the repository you just created.
+
+- Go to the repository's `Settings` and scroll down to the `GitHub Pages` section. Choose `main branch` - `docs`, as the source and click `Save`. Then you will see the link to your personal website.
+
