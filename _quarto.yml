@@ -2,65 +2,31 @@ project:
   type: website
   output-dir: docs
 
+
 website:
   title: "Lifeng Ren"
+  favicon: "img/favicon_io/favicon.ico"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - sidebar:teaching
-      - sidebar:presentation
+      # - href: research.qmd
+      #   text: "Research"
+      # - href: cv.qmd
+      #   text: "CV"
+      - href: teaching.qmd
+        text: "Teaching"
+      # - href: outreach.qmd
+      #   text: "Outreach"
+      # - href: publications
+      #   text: "Publications"
+      # - href: teaching
+      #   text: "Teaching"
 
-  sidebar:
-    - id: teaching
-      title: Teaching
-      style: "docked"
-      background: light
-      collapse-level: 2
-      search: true
-      contents:
-        - section: "R Review 2023"
-          contents:
-            - href: lec0.qmd
-            - href: lec1.qmd
-            - href: lec2.qmd
-            - href: lec3.qmd
-            - href: lec4.qmd
-            - href: lec5.qmd
-    - id: presentation
-      title: Presentation
-      style: "docked"
-      background: light
-      collapse-level: 2
-      search: true
-      contents:
-        - section: "APEC Skill Sessions"
-          contents:
-            - href: quarto_notebook.qmd
-
-  back-to-top-navigation: true
-  page-footer: 
-    left: "Copyright 2023, Lifeng Ren" 
-    right: 
-      - icon: github
-        href: https://github.com/lfr00154/
-    
 format:
   html:
-    theme: united
+    theme: [litera, custom.scss]
     css: styles.css
-    toc: true
-    toc-float: true
-    toc-location: left
-    toc-depth: 2
-    number-sections: true
-    number-depth: 3
-    code-fold: true
-    fig-caption: yes
-    mathjax: local
-
-    
-
-
-
+    toc: false
+    page-layout: full
+    fontsize: 18px

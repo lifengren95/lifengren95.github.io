@@ -1,5 +1,28 @@
 ---
 title: "Lifeng Ren"
+image: img/LifengRen_HeadShot.jpg
+about: 
+    template: trestles
+    image-shape: rectangle
+    image-width: 16em
+    links:
+        - icon: envelope-fill
+          url: "mailto:ren00154@umn.edu"
+        - icon: linkedin
+          url: "https://www.linkedin.com/in/lifengren"
+        - icon: github
+          url: "https://github.com/lifengren95"
+comments: false
 ---
+## Bio
 
-This is personal website for Lifeng Ren, the website is under construction. 
+I am a Ph.D. student in the [Department of Applied Economics](https://apec.umn.edu/) at the University of Minnesota. My research focuses on using mixed methods to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at both global and local scales.
+
+## Research Interests
+- Environmental and Resource Economics
+- Spatial Ecnonomics
+
+## Education
+-  Ph.D., Applied Economics, University of Minnesota, 2021 - Present
+-  M.S., Applied Mathematics & Agricultural and Resource Economics, University of California, Davis, 2021
+-  B.S., Mathematics with Computer Science & Agricultural Economics, Purdue University, 2018
