@@ -1,0 +1,24 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the about-links div
+    const aboutLinks = document.querySelector('.about-links');
+    if (aboutLinks) {
+        // Create the email div
+        const emailDiv = document.createElement('div');
+        emailDiv.style.display = 'block';
+        emailDiv.style.width = '100%';
+        emailDiv.style.marginTop = '20px';
+        emailDiv.style.fontWeight = 'bold';
+        emailDiv.style.color = '#333';
+        emailDiv.style.fontSize = '16px';
+        emailDiv.style.textAlign = 'center';
+        emailDiv.style.userSelect = 'text';
+        emailDiv.style.webkitUserSelect = 'text';
+        emailDiv.style.clear = 'both';
+        emailDiv.textContent = 'Email: ren00154[at]umn.edu';
+        
+        // Insert it AFTER (not inside) the about-links div
+        aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
+    }
+});
+</script>

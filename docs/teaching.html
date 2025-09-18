@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-92a1216ff63a3173f1bf8b0791047ad8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dd562f8712b8c0a9684a311945dce650.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,6 +162,53 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Find the about-links div
+
+    const aboutLinks = document.querySelector('.about-links');
+
+    if (aboutLinks) {
+
+        // Create the email div
+
+        const emailDiv = document.createElement('div');
+
+        emailDiv.style.display = 'block';
+
+        emailDiv.style.width = '100%';
+
+        emailDiv.style.marginTop = '20px';
+
+        emailDiv.style.fontWeight = 'bold';
+
+        emailDiv.style.color = '#333';
+
+        emailDiv.style.fontSize = '16px';
+
+        emailDiv.style.textAlign = 'center';
+
+        emailDiv.style.userSelect = 'text';
+
+        emailDiv.style.webkitUserSelect = 'text';
+
+        emailDiv.style.clear = 'both';
+
+        emailDiv.textContent = 'Email: ren00154[at]umn.edu';
+
+        
+
+        // Insert it AFTER (not inside) the about-links div
+
+        aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
+
+    }
+
+});
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -26,3 +26,4 @@ format:
     toc: false
     page-layout: full
     fontsize: 18px
+    include-after-body: include-after-body.html
