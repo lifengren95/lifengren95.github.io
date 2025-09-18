@@ -4,62 +4,97 @@
     "href": "teaching.html",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "University of Minnesota\n\nGraduate Course\n\nIntroduction to R Statistical Analysis Software: Summer 2023\nCourse Website"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About me",
-    "section": "",
-    "text": "Lifeng is a Ph.D. student in the Department of Applied Economics at the University of Minnesota. His research interests involve using computational methods to study environmental and natural resources economics and the impact of climate changes on both global and local scales.\nLifeng holds an M.S. in Applied Mathematics and Agricultural and Resource Economics from UC Davis. He received his B.S. in Mathematics and Agricultural Economics from Purdue University."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Lifeng Ren",
-    "section": "",
-    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using mixed methods to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at both global and local scales."
-  },
-  {
-    "objectID": "index.html#bio",
-    "href": "index.html#bio",
-    "title": "Lifeng Ren",
-    "section": "",
-    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using mixed methods to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at both global and local scales."
-  },
-  {
-    "objectID": "index.html#research-interests",
-    "href": "index.html#research-interests",
-    "title": "Lifeng Ren",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nEnvironmental and Resource Economics\nSpatial Ecnonomics"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Lifeng Ren",
-    "section": "Education",
-    "text": "Education\n\nPh.D., Applied Economics, University of Minnesota, 2021 - Present\nM.S., Applied Mathematics & Agricultural and Resource Economics, University of California, Davis, 2021\nB.S., Mathematics with Computer Science & Agricultural Economics, Purdue University, 2018"
+    "text": "University of Minnesota\n\nIntroduction to R Statistical Analysis Software: Summer 2023, Graduate\n\nCourse Website"
   },
   {
     "objectID": "teaching.html#instructor",
     "href": "teaching.html#instructor",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "University of Minnesota\n\nGraduate Course\n\nIntroduction to R Statistical Analysis Software: Summer 2023\nCourse Website"
+    "text": "University of Minnesota\n\nIntroduction to R Statistical Analysis Software: Summer 2023, Graduate\n\nCourse Website"
   },
   {
     "objectID": "teaching.html#guest-lecturer",
     "href": "teaching.html#guest-lecturer",
     "title": "Lifeng Ren",
     "section": "Guest Lecturer",
-    "text": "Guest Lecturer\nUniversity of Minnesota\n\nAPEC 8222 - Big Data Methods in Economics: Fall 2023\n\nIntroduction to Natural Language Processing with R and Python\n\nCourse Github Repository\n\nIntroduction to Large Language Model and Economics\n\nCourse Github Repository"
+    "text": "Guest Lecturer\nUniversity of Minnesota\n\nAPEC 8222 - Big Data Methods in Economics: Fall 2023, Graduate\n\nIntroduction to Natural Language Processing with R and Python\n\nCourse Github Repository\n\nIntroduction to Large Language Model and Economics\n\nCourse Github Repository"
   },
   {
     "objectID": "teaching.html#teaching-assistant",
     "href": "teaching.html#teaching-assistant",
     "title": "Lifeng Ren",
     "section": "Teaching Assistant",
-    "text": "Teaching Assistant\nUniversity of California, Davis\n\nCalculus III-Partial Derivatives and Series, Winter 2020"
+    "text": "Teaching Assistant\nUniversity of California, Davis\n\nCalculus III: Partial Derivatives and Series, Winter 2020, Undergraduate"
+  },
+  {
+    "objectID": "outreach.html",
+    "href": "outreach.html",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Kiely, S., Langone, M., McPhail, L., Ren, L., Campos-Gatica, J., Joo, M., … & Lybbert, T. J. (2021). Worth the Hype? Tall Vines Raise Profits for Some–Tradeoffs for All. American Journal of Enology and Viticulture, 5(Suppl 1), 12-21."
+  },
+  {
+    "objectID": "outreach.html#california",
+    "href": "outreach.html#california",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Kiely, S., Langone, M., McPhail, L., Ren, L., Campos-Gatica, J., Joo, M., … & Lybbert, T. J. (2021). Worth the Hype? Tall Vines Raise Profits for Some–Tradeoffs for All. American Journal of Enology and Viticulture, 5(Suppl 1), 12-21."
+  },
+  {
+    "objectID": "outreach.html#minnesota",
+    "href": "outreach.html#minnesota",
+    "title": "Lifeng Ren",
+    "section": "Minnesota",
+    "text": "Minnesota\n“Community Heating Feasibility Study for Lower Sioux Indian Community.”, Community Assistantship Program (CAP) Report, University of Minnesota. link\n“Validating the Agent-Based Model for Cooling Options Utilization During Extreme Heat Events in Hennepin County”, Community Assistantship Program (CAP) Report, University of Minnesota."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales."
+  },
+  {
+    "objectID": "index.html#bio",
+    "href": "index.html#bio",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales."
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Lifeng Ren",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nEnvironmental and Resource Economics\nSpatial Economics"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Lifeng Ren",
+    "section": "Education",
+    "text": "Education\n\nPh.D., Applied Economics, University of Minnesota, 2021–Present\nM.S., Agricultural and Resource Economics & Applied Mathematics, University of California, Davis, 2021\nB.S., Agricultural Economics & Mathematics with Computer Science, Purdue University, 2018"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Cai, Q., Li, Q., and Ren, L.. “Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior.”\nRen, L., Woodhouse, E., Johnson, J., and Leclère, D. “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups.”\nRen, L., Thai, G., Vu, K., Vuong, N. “Climate Change and Adaptation in Vietnam.”\nRen, L., and Johnson, J. “Global Economic Impact of Wildfire Smoke.”"
+  },
+  {
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Cai, Q., Li, Q., and Ren, L.. “Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior.”\nRen, L., Woodhouse, E., Johnson, J., and Leclère, D. “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups.”\nRen, L., Thai, G., Vu, K., Vuong, N. “Climate Change and Adaptation in Vietnam.”\nRen, L., and Johnson, J. “Global Economic Impact of Wildfire Smoke.”"
+  },
+  {
+    "objectID": "research.html#work-in-progress",
+    "href": "research.html#work-in-progress",
+    "title": "Lifeng Ren",
+    "section": "Work in Progress",
+    "text": "Work in Progress\n“Gross Ecosystem Product.” (with NatCap TEEMs)\n“Global Recreation Modeling” (with Matt Braaksma, Spencer Wood, Ryan Mcway)"
   }
 ]

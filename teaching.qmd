@@ -1,8 +1,8 @@
 ## Instructor
+
 **University of Minnesota**
 
-- Graduate Course
-  - Introduction to R Statistical Analysis Software: Summer 2023
+- Introduction to R Statistical Analysis Software: Summer 2023, Graduate
   - [Course Website](https://www.lifengren.com/R-review2023/)
 
 
@@ -10,7 +10,7 @@
 
 **University of Minnesota**
 
-- APEC 8222 - Big Data Methods in Economics: Fall 2023
+- APEC 8222 - Big Data Methods in Economics: Fall 2023, Graduate
     - Introduction to Natural Language Processing with R and Python
         - [Course Github Repository](https://github.com/lifengren95/R_Python_NLP)
     - Introduction to Large Language Model and Economics
@@ -20,4 +20,4 @@
 
 **University of California, Davis**
 
-- Calculus III-Partial Derivatives and Series, Winter 2020
+- Calculus III: Partial Derivatives and Series, Winter 2020, Undergraduate
