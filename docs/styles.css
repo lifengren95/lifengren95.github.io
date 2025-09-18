@@ -2,7 +2,7 @@
 
 /* Add email text under the social media buttons */
 .about-links::after {
-    content: "Email: ren00154[at]umn.edu";
+    content: "Email: ren00154@umn.edu";
     display: block;
     margin-top: 20px;
     font-weight: bold;
