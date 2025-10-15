@@ -22,6 +22,11 @@ I am a Ph.D. student in the [Department of Applied Economics](https://apec.umn.e
 - Spatial Economics
 
 ## Education
--  Ph.D., Applied Economics, University of Minnesota, 2021–Present
--  M.S., Agricultural and Resource Economics & Applied Mathematics, University of California, Davis, 2021
--  B.S., Agricultural Economics & Mathematics with Computer Science, Purdue University, 2018
+Ph.D., Applied Economics, 2021–Present <br>
+University of Minnesota
+
+M.S., Agricultural and Resource Economics & M.S., Applied Mathematics, 2021 <br>
+University of California, Davis
+
+B.S., Agricultural Economics & B.S., Mathematics with Computer Science, 2018 <br>
+Purdue University
