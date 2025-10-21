@@ -16,3 +16,12 @@ h1, h2, h3, h4, h5, h6, .menu-text, .navbar-title {
 .menu-text {
   font-family: $font-family-heading;
 }
+
+/* Adjust heading sizes */
+h2 {
+  font-size: 1.5rem;  /* Makes h2 headings smaller (like "Bio", "Research Interests") */
+}
+
+h3 {
+  font-size: 1.25rem;  /* Makes h3 headings smaller if you have any */
+}

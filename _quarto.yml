@@ -25,5 +25,5 @@ format:
     css: styles.css
     toc: false
     page-layout: full
-    fontsize: 18px
+    fontsize: 16px
     include-after-body: include-after-body.html
