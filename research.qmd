@@ -20,7 +20,7 @@
 ## Work in Progress
 
 <div class="paper">
-<div class="paper-title">&dagger;&ldquo;Global Economic Impact of Wildfire Smoke&rdquo; (with Justin Johnson)</div>
+<div class="paper-title">&dagger;&ldquo;Global Agricultural Economic Impact of Wildfire Smoke&rdquo; (with Justin Johnson)</div>
 </div>
 
 <div class="paper">
