@@ -20,5 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Insert it AFTER (not inside) the about-links div
         aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
     }
+
+    // --- new: status text should not toggle the abstract ---
+    document.querySelectorAll('.research .paper-venue').forEach(function (el) {
+        el.addEventListener('click', function (e) { e.preventDefault(); });
+    });
 });
 </script>

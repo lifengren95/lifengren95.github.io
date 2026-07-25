@@ -1,1 +1,123 @@
-/* css styles */
+/* ---------- headings ---------- */
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-top: 2.5rem;
+}
+
+h2:has(.head-note) {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+h2.flex-head {
+  max-width: 62rem;
+}
+
+h2 .head-note {
+  margin-left: auto;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #6c6c6c;
+}
+
+body {
+  font-size: 1.05rem;
+}
+
+/* ---------- research entries ---------- */
+
+.research .paper {
+  margin-bottom: 1.5em;
+}
+
+.research .paper-title {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* ---------- click-to-open abstract ---------- */
+
+.research details.abstract {
+  margin-top: 0.25rem;
+}
+
+.research details.abstract > summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  width: fit-content;
+  list-style: none;
+  cursor: default;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.research details.abstract > summary::-webkit-details-marker {
+  display: none;
+}
+
+.research .paper-venue {
+  color: #5f6368;
+}
+
+.research .abstract-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #1155cc;
+  cursor: pointer;
+}
+
+.research .abstract-toggle::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid currentColor;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.18s ease;
+}
+
+.research details.abstract[open] .abstract-toggle::before {
+  transform: rotate(90deg);
+}
+
+.research .abstract-toggle:hover {
+  text-decoration: underline;
+}
+
+.research details.abstract > summary:focus-visible {
+  outline: 2px solid #1155cc;
+  outline-offset: 3px;
+}
+
+.research details.abstract > p {
+  margin: 0.5rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid #dadce0;
+  max-width: 62rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .research details.abstract > p {
+    text-align: left;
+    padding-left: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research .abstract-toggle::before {
+    transition: none;
+  }
+}

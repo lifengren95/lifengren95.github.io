@@ -99,6 +99,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
@@ -130,8 +134,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="minnesota" class="level2">
 <h2 class="anchored" data-anchor-id="minnesota">Minnesota</h2>
-<p>Ren, L. (2022). “Community Heating Feasibility Study for Lower Sioux Indian Community.”, Community Assistantship Program (CAP) Report, University of Minnesota. (<a href="https://hdl.handle.net/11299/252698">link</a>)</p>
-<p>Ren, L. (2025). “Validating the Agent-Based Model for Cooling Options Utilization During Extreme Heat Events in Hennepin County”, Community Assistantship Program (CAP) Report, University of Minnesota. (<a href="https://hdl.handle.net/11299/276873">link</a>)</p>
+<p><strong>Ren, L.</strong> (2022). “Community Heating Feasibility Study for Lower Sioux Indian Community.”, Community Assistantship Program (CAP) Report, University of Minnesota. (<a href="https://hdl.handle.net/11299/252698">link</a>)</p>
+<p><strong>Ren, L.</strong> (2025). “Validating the Agent-Based Model for Cooling Options Utilization During Extreme Heat Events in Hennepin County”, Community Assistantship Program (CAP) Report, University of Minnesota. (<a href="https://hdl.handle.net/11299/276873">link</a>)</p>
 
 
 </section>
@@ -180,6 +184,16 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
 
     }
+
+
+
+    // --- new: status text should not toggle the abstract ---
+
+    document.querySelectorAll('.research .paper-venue').forEach(function (el) {
+
+        el.addEventListener('click', function (e) { e.preventDefault(); });
+
+    });
 
 });
 

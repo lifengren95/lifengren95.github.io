@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -99,6 +128,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
@@ -124,20 +157,75 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="working-papers" class="level2">
-<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
-<p>Cai, Q., Li, Q., and <strong>Ren, L.</strong>. “Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior.”</p>
-<p><strong>Ren, L.</strong>, Woodhouse, E., Johnson, J., and Leclère, D. “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups.”</p>
-<p><strong>Ren, L.</strong>, Thai, G., Vu, K., Vuong, N. “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam”</p>
-<p><strong>Ren, L.</strong>, and Johnson, J. “Global Economic Impact of Wildfire Smoke.”</p>
+<div class="research">
+<section id="working-papers-indicates-lead-or-co-lead-author" class="level2 flex-head">
+<h2 class="flex-head anchored" data-anchor-id="working-papers-indicates-lead-or-co-lead-author">Working Papers <span class="head-note">† indicates lead or co-lead author</span></h2>
+<div class="paper">
+<div class="paper-title">
+† <strong>“Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts”</strong> (with Qingyin Cai, Qingxiao Li)
+</div>
+<details class="abstract">
+<summary>
+<span class="paper-venue">Under Review</span><span class="abstract-toggle">Abstract</span>
+</summary>
+<p>
+We study how access to and accuracy of public forecasts shape household avoidance of air pollution. Using national household transaction data and daily PM<span class="math inline">\(_{2.5}\)</span> measurements, we exploit the staggered rollout of EPA AirNow forecasts and wind-driven variation in pollution. We find that higher pollution reduces in-person shopping, while forecast access strengthens this response and shifts shopping to days before higher pollution. Households curtail shopping more sharply on polluted days when recent forecasts have been more accurate. Moving from the mean to the 75th percentile of forecast accuracy yields 29 percent of the shopping-related exposure reduction associated with introducing forecast access.
+</p>
+</details>
+</div>
+<div class="paper">
+<div class="paper-title">
+† <strong>“Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam”</strong> (with Giang Thai, Khoa Vu, Nguyen Vuong)
+</div>
+<details class="abstract">
+<summary>
+<span class="abstract-toggle">Abstract</span>
+</summary>
+<p>
+Climate change increases the frequency and intensity of droughts, posing major risks to agricultural production in developing economies such as Vietnam. We study how droughts reshape land allocation and input choices that underpin both short-run adaptation and long-run structural change. We find that droughts reduce rice cultivation, reallocating land away from rice toward other crops and aquaculture in the long term. In response to droughts, households intensify rice production on smaller plots, diversify into non-rice crops, and expand aquaculture in the short run. At the same time, droughts have relatively more adverse effects on local manufacturing sectors, pulling workers out of non-agriculture into agriculture. The additional agricultural labor is absorbed primarily into rice intensification and crop diversification, whereas aquaculture expansion is entirely driven by mechanization adoption. The results highlight various adjustment margins to droughts in interaction with local labor market conditions in shaping adaptation pathways.
+</p>
+</details>
+</div>
+<div class="paper">
+<div class="paper-title">
+† <strong>“Distributional Equity of Land Use Change and Ecosystem Service Gains under Global Biodiversity Conservation Scenarios”</strong> (with Elliott Woodhouse, Justin Johnson, David Leclère)
+</div>
+<details class="abstract">
+<summary>
+<span class="abstract-toggle">Abstract</span>
+</summary>
+<p>
+Global biodiversity conservation pathways require large scale reallocation of land from agriculture toward restoration, yet how the resulting costs and benefits are distributed across countries remains poorly understood. We downscale land use projections from four integrated assessment models to 10 arc second resolution, estimate spatially explicit changes in carbon stocks using InVEST, and evaluate distributional outcomes across five socioeconomic dimensions through the Applied Justice Taxonomy and Assessment (AJUST) framework. We find that natural land and carbon stocks are already unevenly distributed at baseline. Under the most ambitious scenario, carbon sequestration efficiency improves but restoration burdens remain concentrated in tropical regions where vulnerability is highest. Inequality in per capita ecosystem service gains remains high across all scenarios, with Gini coefficients above 0.84. Vulnerable groups, including low income and high Indigenous Peoples’ and Local Communities’ land share countries, face higher restoration costs and less favorable balances between burdens and gains. Utilitarian, egalitarian, and prioritarian perspectives yield distinct evaluations of the same outcomes, demonstrating that no single framework is sufficient to assess the fairness of conservation pathways.
+</p>
+</details>
+</div>
 </section>
 <section id="work-in-progress" class="level2">
 <h2 class="anchored" data-anchor-id="work-in-progress">Work in Progress</h2>
-<p>“Gross Ecosystem Product”, (with <a href="https://natcapteems.umn.edu/">NatCap TEEMs</a>)</p>
-<p>“Global Recreation Modeling”, (with Matt Braaksma, Spencer Wood, Ryan Mcway)</p>
-
-
+<div class="paper">
+<div class="paper-title">
+†“Global Economic Impact of Wildfire Smoke” (with Justin Johnson)
+</div>
+</div>
+<div class="paper">
+<div class="paper-title">
+“Gross Ecosystem Product” (with <a href="https://natcapteems.umn.edu/">NatCap TEEMs</a>)
+</div>
+</div>
+<div class="paper">
+<div class="paper-title">
+“Global Recreation Modeling” (with Matt Braaksma, Spencer Wood, Ryan Mcway)
+</div>
+</div>
+<div class="paper">
+<div class="paper-title">
+†“Impact of Upstream Dams on the Downstream Labor Market Dynamics: Evidence from the Mekong River ” (with Giang Thai, Khoa Vu, and Nguyen Vuong)
+</div>
+</div>
 </section>
+</div>
+
+
 
 </main> <!-- /main -->
 <script>
@@ -183,6 +271,16 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
 
     }
+
+
+
+    // --- new: status text should not toggle the abstract ---
+
+    document.querySelectorAll('.research .paper-venue').forEach(function (el) {
+
+        el.addEventListener('click', function (e) { e.preventDefault(); });
+
+    });
 
 });
 

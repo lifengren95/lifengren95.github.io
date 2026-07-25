@@ -1,16 +1,39 @@
-## Working Papers
+::: {.research}
 
-Cai, Q., Li, Q., and **Ren, L.**. "Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior."
+## Working Papers [† indicates lead or co-lead author]{.head-note} {.flex-head}
 
-**Ren, L.**, Woodhouse, E., Johnson, J., and Leclère, D. "Carbon Storage Distribution under Integrated Conservation
-Pathways: An Equity Analysis of Different Socioeconomic Groups."
+<div class="paper">
+<div class="paper-title">&dagger; <strong>&ldquo;Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts&rdquo;</strong> (with Qingyin Cai, Qingxiao Li)</div>
+<details class="abstract"><summary><span class="paper-venue">Under Review</span><span class="abstract-toggle">Abstract</span></summary><p>We study how access to and accuracy of public forecasts shape household avoidance of air pollution. Using national household transaction data and daily PM$_{2.5}$ measurements, we exploit the staggered rollout of EPA AirNow forecasts and wind-driven variation in pollution. We find that higher pollution reduces in-person shopping, while forecast access strengthens this response and shifts shopping to days before higher pollution. Households curtail shopping more sharply on polluted days when recent forecasts have been more accurate. Moving from the mean to the 75th percentile of forecast accuracy yields 29 percent of the shopping-related exposure reduction associated with introducing forecast access.</p></details>
+</div>
 
-**Ren, L.**, Thai, G., Vu, K., Vuong, N. "Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam"
+<div class="paper">
+<div class="paper-title">&dagger; <strong>&ldquo;Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam&rdquo;</strong> (with Giang Thai, Khoa Vu, Nguyen Vuong)</div>
+<details class="abstract"><summary><span class="abstract-toggle">Abstract</span></summary><p>Climate change increases the frequency and intensity of droughts, posing major risks to agricultural production in developing economies such as Vietnam. We study how droughts reshape land allocation and input choices that underpin both short-run adaptation and long-run structural change. We find that droughts reduce rice cultivation, reallocating land away from rice toward other crops and aquaculture in the long term. In response to droughts, households intensify rice production on smaller plots, diversify into non-rice crops, and expand aquaculture in the short run. At the same time, droughts have relatively more adverse effects on local manufacturing sectors, pulling workers out of non-agriculture into agriculture. The additional agricultural labor is absorbed primarily into rice intensification and crop diversification, whereas aquaculture expansion is entirely driven by mechanization adoption. The results highlight various adjustment margins to droughts in interaction with local labor market conditions in shaping adaptation pathways. </p></details>
+</div>
 
-**Ren, L.**, and Johnson, J. "Global Economic Impact of Wildfire Smoke."
+<div class="paper">
+<div class="paper-title">&dagger; <strong>&ldquo;Distributional Equity of Land Use Change and Ecosystem Service Gains under Global Biodiversity Conservation Scenarios&rdquo;</strong> (with Elliott Woodhouse, Justin Johnson, David Leclère)</div>
+<details class="abstract"><summary><span class="abstract-toggle">Abstract</span></summary><p>Global biodiversity conservation pathways require large scale reallocation of land from agriculture toward restoration, yet how the resulting costs and benefits are distributed across countries remains poorly understood. We downscale land use projections from four integrated assessment models to 10 arc second resolution, estimate spatially explicit changes in carbon stocks using InVEST, and evaluate distributional outcomes across five socioeconomic dimensions through the Applied Justice Taxonomy and Assessment (AJUST) framework. We find that natural land and carbon stocks are already unevenly distributed at baseline. Under the most ambitious scenario, carbon sequestration efficiency improves but restoration burdens remain concentrated in tropical regions where vulnerability is highest. Inequality in per capita ecosystem service gains remains high across all scenarios, with Gini coefficients above 0.84. Vulnerable groups, including low income and high Indigenous Peoples' and Local Communities' land share countries, face higher restoration costs and less favorable balances between burdens and gains. Utilitarian, egalitarian, and prioritarian perspectives yield distinct evaluations of the same outcomes, demonstrating that no single framework is sufficient to assess the fairness of conservation pathways.</p></details>
+</div>
 
 ## Work in Progress
 
-"Gross Ecosystem Product", (with [NatCap TEEMs](https://natcapteems.umn.edu/))
+<div class="paper">
+<div class="paper-title">&dagger;&ldquo;Global Economic Impact of Wildfire Smoke&rdquo; (with Justin Johnson)</div>
+</div>
 
-"Global Recreation Modeling", (with Matt Braaksma, Spencer Wood, Ryan Mcway)
+<div class="paper">
+<div class="paper-title">&ldquo;Gross Ecosystem Product&rdquo; (with <a href="https://natcapteems.umn.edu/">NatCap TEEMs</a>)</div>
+</div>
+
+<div class="paper">
+<div class="paper-title">&ldquo;Global Recreation Modeling&rdquo; (with Matt Braaksma, Spencer Wood, Ryan Mcway)</div>
+</div>
+
+<div class="paper">
+<div class="paper-title">&dagger;&ldquo;Impact of Upstream Dams on the Downstream Labor Market Dynamics: Evidence from the Mekong River &rdquo; (with Giang Thai, Khoa Vu, and Nguyen Vuong)</div>
+</div>
+
+
+:::

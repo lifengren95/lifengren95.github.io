@@ -98,6 +98,10 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./teaching.html"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
@@ -122,13 +126,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="about-entity">
     <img src="img/LifengRen_HeadShot.jpg" class="about-image
   round " style="height: 16em; width: 16em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Lifeng Ren</h1>
-</div>
-<div class="quarto-title-meta column-page">
-  </div>
-</header>
+<header id="title-block-header" class="quarto-title-block"></header>
     <div class="about-links">
   <a href="https://www.linkedin.com/in/lifengren" class="about-link" rel="" target="">
     <i class="bi bi-linkedin"></i>
@@ -141,22 +139,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
   </div>
   <div class="about-contents"><main class="content column-page" id="quarto-document-content">
-<section id="bio" class="level2">
-<h2 data-anchor-id="bio">Bio</h2>
-<p>I am a Ph.D.&nbsp;student in the <a href="https://apec.umn.edu/">Department of Applied Economics</a> at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales.</p>
+<section id="welcome-to-my-website" class="level2">
+<h2 data-anchor-id="welcome-to-my-website">Welcome to my website!</h2>
+<p>I am a Ph.D.&nbsp;candidate in the <a href="https://apec.umn.edu/">Department of Applied Economics</a> at the University of Minnesota, specializing in environmental and resource economics.</p>
+<p>My research draws on large-scale household survey and Earth Observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards.</p>
 </section>
 <section id="research-interests" class="level2">
 <h2 data-anchor-id="research-interests">Research Interests</h2>
 <ul>
 <li>Environmental and Resource Economics</li>
-<li>Spatial Economics</li>
+<li>Agricultural Economics</li>
+<li>Climate Change</li>
+<li>Ecosystem Service</li>
 </ul>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<p>Ph.D., Applied Economics, 2021–Present <br> University of Minnesota</p>
-<p>M.S., Agricultural and Resource Economics &amp; M.S., Applied Mathematics, 2021 <br> University of California, Davis</p>
-<p>B.S., Agricultural Economics &amp; B.S., Mathematics with Computer Science, 2018 <br> Purdue University</p>
 
 
 </section>
@@ -206,6 +201,16 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutLinks.parentNode.insertBefore(emailDiv, aboutLinks.nextSibling);
 
     }
+
+
+
+    // --- new: status text should not toggle the abstract ---
+
+    document.querySelectorAll('.research .paper-venue').forEach(function (el) {
+
+        el.addEventListener('click', function (e) { e.preventDefault(); });
+
+    });
 
 });
 

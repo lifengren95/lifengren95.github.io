@@ -53,21 +53,21 @@
     "href": "index.html",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales."
+    "text": "I am a Ph.D. candidate in the Department of Applied Economics at the University of Minnesota, specializing in environmental and resource economics.\nMy research draws on large-scale household survey and Earth Observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards."
   },
   {
     "objectID": "index.html#bio",
     "href": "index.html#bio",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "I am a Ph.D. student in the Department of Applied Economics at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales."
+    "text": "I am a Ph.D. candidate in the Department of Applied Economics at the University of Minnesota, specializing in environmental and resource economics.\nMy research draws on large-scale household survey and earth observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards."
   },
   {
     "objectID": "index.html#research-interests",
     "href": "index.html#research-interests",
     "title": "Lifeng Ren",
     "section": "Research Interests",
-    "text": "Research Interests\n\nEnvironmental and Resource Economics\nSpatial Economics"
+    "text": "Research Interests\n\nEnvironmental and Resource Economics\nAgricultural Economics\nClimate Change\nEcosystem Service"
   },
   {
     "objectID": "index.html#education",
@@ -81,20 +81,69 @@
     "href": "research.html",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "Cai, Q., Li, Q., and Ren, L.. “Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior.”\nRen, L., Woodhouse, E., Johnson, J., and Leclère, D. “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups.”\nRen, L., Thai, G., Vu, K., Vuong, N. “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam”\nRen, L., and Johnson, J. “Global Economic Impact of Wildfire Smoke.”"
+    "text": "† “Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts” (with Qingyin Cai, Qingxiao Li)\n\n\n\nUnder ReviewAbstract\n\n\nWe study how access to and accuracy of public forecasts shape household avoidance of air pollution. Using national household transaction data and daily PM\\(_{2.5}\\) measurements, we exploit the staggered rollout of EPA AirNow forecasts and wind-driven variation in pollution. We find that higher pollution reduces in-person shopping, while forecast access strengthens this response and shifts shopping to days before higher pollution. Households curtail shopping more sharply on polluted days when recent forecasts have been more accurate. Moving from the mean to the 75th percentile of forecast accuracy yields 29 percent of the shopping-related exposure reduction associated with introducing forecast access.\n\n\n\n\n\n† “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam” (with Giang Thai, Khoa Vu, Nguyen Vuong)\n\n\n\nAbstract\n\n\nClimate change increases the frequency and intensity of droughts, posing major risks to agricultural production in developing economies such as Vietnam. We study how droughts reshape land allocation and input choices that underpin both short-run adaptation and long-run structural change. We find that droughts reduce rice cultivation, reallocating land away from rice toward other crops and aquaculture in the long term. In response to droughts, households intensify rice production on smaller plots, diversify into non-rice crops, and expand aquaculture in the short run. At the same time, droughts have relatively more adverse effects on local manufacturing sectors, pulling workers out of non-agriculture into agriculture. The additional agricultural labor is absorbed primarily into rice intensification and crop diversification, whereas aquaculture expansion is entirely driven by mechanization adoption. The results highlight various adjustment margins to droughts in interaction with local labor market conditions in shaping adaptation pathways.\n\n\n\n\n\n† “Distributional Equity of Land Use Change and Ecosystem Service Gains under Global Biodiversity Conservation Scenarios” (with Elliott Woodhouse, Justin Johnson, David Leclère)\n\n\n\nAbstract\n\n\nGlobal biodiversity conservation pathways require large scale reallocation of land from agriculture toward restoration, yet how the resulting costs and benefits are distributed across countries remains poorly understood. We downscale land use projections from four integrated assessment models to 10 arc second resolution, estimate spatially explicit changes in carbon stocks using InVEST, and evaluate distributional outcomes across five socioeconomic dimensions through the Applied Justice Taxonomy and Assessment (AJUST) framework. We find that natural land and carbon stocks are already unevenly distributed at baseline. Under the most ambitious scenario, carbon sequestration efficiency improves but restoration burdens remain concentrated in tropical regions where vulnerability is highest. Inequality in per capita ecosystem service gains remains high across all scenarios, with Gini coefficients above 0.84. Vulnerable groups, including low income and high Indigenous Peoples’ and Local Communities’ land share countries, face higher restoration costs and less favorable balances between burdens and gains. Utilitarian, egalitarian, and prioritarian perspectives yield distinct evaluations of the same outcomes, demonstrating that no single framework is sufficient to assess the fairness of conservation pathways.\n\n\n\n\n\n\n\n\n†“Global Economic Impact of Wildfire Smoke” (with Justin Johnson)\n\n\n\n\n“Gross Ecosystem Product” (with NatCap TEEMs)\n\n\n\n\n“Global Recreation Modeling” (with Matt Braaksma, Spencer Wood, Ryan Mcway)\n\n\n\n\n†“Impact of Upstream Dams on the Downstream Labor Market Dynamics: Evidence from the Mekong River ” (with Giang Thai, Khoa Vu, and Nguyen Vuong)"
   },
   {
     "objectID": "research.html#working-papers",
     "href": "research.html#working-papers",
     "title": "Lifeng Ren",
     "section": "",
-    "text": "Cai, Q., Li, Q., and Ren, L.. “Bad Air Days: Pollution, Forecasts, and Consumer Shopping Behavior.”\nRen, L., Woodhouse, E., Johnson, J., and Leclère, D. “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups.”\nRen, L., Thai, G., Vu, K., Vuong, N. “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam”\nRen, L., and Johnson, J. “Global Economic Impact of Wildfire Smoke.”"
+    "text": "† indicates lead or co-lead author.\n† “Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts” (with Qingyin Cai, Qingxiao Li), under review\n† “Carbon Storage Distribution under Integrated Conservation Pathways: An Equity Analysis of Different Socioeconomic Groups” (with Elliott Woodhouse, Justin Johnson, David Leclère)\n† “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam” (with Giang Thai, Khoa Vu, Nguyen Vuong)"
   },
   {
     "objectID": "research.html#work-in-progress",
     "href": "research.html#work-in-progress",
     "title": "Lifeng Ren",
-    "section": "Work in Progress",
-    "text": "Work in Progress\n“Gross Ecosystem Product”, (with NatCap TEEMs)\n“Global Recreation Modeling”, (with Matt Braaksma, Spencer Wood, Ryan Mcway)"
+    "section": "",
+    "text": "†“Global Economic Impact of Wildfire Smoke” (with Justin Johnson)\n\n\n\n\n“Gross Ecosystem Product” (with NatCap TEEMs)\n\n\n\n\n“Global Recreation Modeling” (with Matt Braaksma, Spencer Wood, Ryan Mcway)\n\n\n\n\n†“Impact of Upstream Dams on the Downstream Labor Market Dynamics: Evidence from the Mekong River ” (with Giang Thai, Khoa Vu, and Nguyen Vuong)"
+  },
+  {
+    "objectID": "research.html#selected-work-in-progress",
+    "href": "research.html#selected-work-in-progress",
+    "title": "Lifeng Ren",
+    "section": "Selected Work in Progress",
+    "text": "Selected Work in Progress\n† “Global Economic Impact of Wildfire Smoke”, (with Justin Johnson)\n“Gross Ecosystem Product”, (with NatCap TEEMs)"
+  },
+  {
+    "objectID": "research.html#working-papers-indicates-lead-or-co-lead-author",
+    "href": "research.html#working-papers-indicates-lead-or-co-lead-author",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "† “Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts” (with Qingyin Cai, Qingxiao Li)\n\n\n\nUnder ReviewAbstract\n\n\nWe study how access to and accuracy of public forecasts shape household avoidance of air pollution. Using national household transaction data and daily PM\\(_{2.5}\\) measurements, we exploit the staggered rollout of EPA AirNow forecasts and wind-driven variation in pollution. We find that higher pollution reduces in-person shopping, while forecast access strengthens this response and shifts shopping to days before higher pollution. Households curtail shopping more sharply on polluted days when recent forecasts have been more accurate. Moving from the mean to the 75th percentile of forecast accuracy yields 29 percent of the shopping-related exposure reduction associated with introducing forecast access.\n\n\n\n\n\n† “Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam” (with Giang Thai, Khoa Vu, Nguyen Vuong)\n\n\n\nAbstract\n\n\nClimate change increases the frequency and intensity of droughts, posing major risks to agricultural production in developing economies such as Vietnam. We study how droughts reshape land allocation and input choices that underpin both short-run adaptation and long-run structural change. We find that droughts reduce rice cultivation, reallocating land away from rice toward other crops and aquaculture in the long term. In response to droughts, households intensify rice production on smaller plots, diversify into non-rice crops, and expand aquaculture in the short run. At the same time, droughts have relatively more adverse effects on local manufacturing sectors, pulling workers out of non-agriculture into agriculture. The additional agricultural labor is absorbed primarily into rice intensification and crop diversification, whereas aquaculture expansion is entirely driven by mechanization adoption. The results highlight various adjustment margins to droughts in interaction with local labor market conditions in shaping adaptation pathways.\n\n\n\n\n\n† “Distributional Equity of Land Use Change and Ecosystem Service Gains under Global Biodiversity Conservation Scenarios” (with Elliott Woodhouse, Justin Johnson, David Leclère)\n\n\n\nAbstract\n\n\nGlobal biodiversity conservation pathways require large scale reallocation of land from agriculture toward restoration, yet how the resulting costs and benefits are distributed across countries remains poorly understood. We downscale land use projections from four integrated assessment models to 10 arc second resolution, estimate spatially explicit changes in carbon stocks using InVEST, and evaluate distributional outcomes across five socioeconomic dimensions through the Applied Justice Taxonomy and Assessment (AJUST) framework. We find that natural land and carbon stocks are already unevenly distributed at baseline. Under the most ambitious scenario, carbon sequestration efficiency improves but restoration burdens remain concentrated in tropical regions where vulnerability is highest. Inequality in per capita ecosystem service gains remains high across all scenarios, with Gini coefficients above 0.84. Vulnerable groups, including low income and high Indigenous Peoples’ and Local Communities’ land share countries, face higher restoration costs and less favorable balances between burdens and gains. Utilitarian, egalitarian, and prioritarian perspectives yield distinct evaluations of the same outcomes, demonstrating that no single framework is sufficient to assess the fairness of conservation pathways."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Ph.D. in Applied Economics, University of Minnesota, 2021–Present \nM.S. in Agricultural and Resource Economics; Applied Mathematics, UC Davis, 2021 \nB.S. in Agricultural Economics; Mathematics (Minor: Computer Science), Purdue University, 2018"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "Ph.D. in Applied Economics, University of Minnesota, 2021–Present \nM.S. in Agricultural and Resource Economics; Applied Mathematics, UC Davis, 2021 \nB.S. in Agricultural Economics; Mathematics (Minor: Computer Science), Purdue University, 2018"
+  },
+  {
+    "objectID": "cv.html#research-interests",
+    "href": "cv.html#research-interests",
+    "title": "Lifeng Ren",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nEnvironmental and Resource Economics\nAgricultural Economics\nClimate Change\nEcosystem Service"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "I am a Ph.D. candidate in the Department of Applied Economics at the University of Minnesota, specializing in environmental and resource economics.\nMy research draws on large-scale household survey and earth observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards."
+  },
+  {
+    "objectID": "index.html#welcome-to-my-website",
+    "href": "index.html#welcome-to-my-website",
+    "title": "Lifeng Ren",
+    "section": "",
+    "text": "I am a Ph.D. candidate in the Department of Applied Economics at the University of Minnesota, specializing in environmental and resource economics.\nMy research draws on large-scale household survey and Earth Observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards."
   }
 ]

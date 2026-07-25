@@ -1,5 +1,4 @@
 ---
-title: "Lifeng Ren"
 image: img/LifengRen_HeadShot.jpg
 about: 
     template: trestles
@@ -13,20 +12,14 @@ about:
 comments: false
 ---
 
-## Bio
+## Welcome to my website!
 
-I am a Ph.D. student in the [Department of Applied Economics](https://apec.umn.edu/) at the University of Minnesota. My research focuses on using applied econometrics, machine learning, and general equilibrium models to study the economic impacts of climate change and extreme weather events (e.g., wildfires) at global and local scales.
+I am a Ph.D. candidate in the [Department of Applied Economics](https://apec.umn.edu/) at the University of Minnesota, specializing in environmental and resource economics. 
+
+My research draws on large-scale household survey and Earth Observation data. Using applied econometrics, machine learning, and spatial optimization, I study (1) how households respond to environmental and climate-related hazards, including air pollution, drought, and wildfires, and (2) how public agencies can design more effective information systems and land use policies to help households mitigate the impacts of these hazards.
 
 ## Research Interests
 - Environmental and Resource Economics
-- Spatial Economics
-
-## Education
-Ph.D., Applied Economics, 2021–Present <br>
-University of Minnesota
-
-M.S., Agricultural and Resource Economics & M.S., Applied Mathematics, 2021 <br>
-University of California, Davis
-
-B.S., Agricultural Economics & B.S., Mathematics with Computer Science, 2018 <br>
-Purdue University
+- Agricultural Economics
+- Climate Change
+- Ecosystem Service
