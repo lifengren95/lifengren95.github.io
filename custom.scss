@@ -1,9 +1,11 @@
 /*-- scss:defaults --*/
 
 @import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-$font-family-serif: "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif !default;
+$body-color: #000 !default;
+
+$font-family-serif: "Gentium Book Plus", "Gentium Plus", Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-heading: "Goudy Bookletter 1911";
 $font-family-base: $font-family-serif;
 
@@ -17,11 +19,10 @@ h1, h2, h3, h4, h5, h6, .menu-text, .navbar-title {
   font-family: $font-family-heading;
 }
 
-/* Adjust heading sizes */
 h2 {
-  font-size: 1.5rem;  /* Makes h2 headings smaller (like "Bio", "Research Interests") */
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.25rem;  /* Makes h3 headings smaller if you have any */
+  font-size: 1.25rem;
 }

@@ -5,9 +5,9 @@ about:
     image-shape: round
     image-width: 16em
     links:
-        - icon: linkedin
+        - text: LinkedIn
           url: "https://www.linkedin.com/in/lifengren"
-        - icon: github
+        - text: GitHub
           url: "https://github.com/lifengren95"
 comments: false
 ---

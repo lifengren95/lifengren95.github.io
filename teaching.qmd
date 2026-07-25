@@ -3,7 +3,8 @@
 **University of Minnesota**
 
 - Introduction to R Statistical Analysis Software: Summer 2023, Graduate
-  - [Course Website](https://www.lifengren.com/R-review2023/)
+    - [Course Website](https://www.lifengren.com/R-review2023/)
+    - Course Evaluation: 4.8/5 ([PDF](assets/teaching/R-Review-Course-Evaluations.pdf))
 
 
 ## Guest Lecturer
@@ -20,4 +21,6 @@
 
 **University of California, Davis**
 
-- Calculus III: Partial Derivatives and Series, Winter 2020, Undergraduate
+- MATH 21C - Calculus III: Partial Derivatives and Series: Winter 2020, Summer 2020, Undergraduate
+- ARE 112 - Organization Management: Spring 2019, Undergraduate
+- ARE 143 - Investments: Winter 2019, Undergraduate
