@@ -22,4 +22,4 @@ My research draws on large-scale household survey and Earth Observation data. Us
 - Environmental and Resource Economics
 - Agricultural Economics
 - Climate Change
-- Ecosystem Service
+- Ecosystem Services
