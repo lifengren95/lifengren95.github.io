@@ -1,6 +1,5 @@
-## Education
-Ph.D. in Applied Economics, University of Minnesota, 2021–Present <br>
+---
+title: "Curriculum Vitae"
+---
 
-M.S. in Agricultural and Resource Economics; Applied Mathematics, UC Davis, 2021 <br>
-
-B.S. in Agricultural Economics; Mathematics (Minor: Computer Science), Purdue University, 2018 <br>
+You can find my CV [here](assets/cv/LifengRen_Academic_CV_website.pdf).

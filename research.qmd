@@ -3,13 +3,38 @@
 ## Working Papers [† indicates lead or co-lead author]{.head-note} {.flex-head}
 
 <div class="paper">
-<div class="paper-title">&dagger; <strong>&ldquo;Access, Accuracy, and Avoidance: Household Responses to Air Pollution Forecasts&rdquo;</strong> (with Qingyin Cai, Qingxiao Li)</div>
-<details class="abstract"><summary><span class="paper-venue">Under Review</span><span class="abstract-toggle">Abstract</span></summary><p>We study how access to and accuracy of public forecasts shape household avoidance of air pollution. Using national household transaction data and daily PM$_{2.5}$ measurements, we exploit the staggered rollout of EPA AirNow forecasts and wind-driven variation in pollution. We find that higher pollution reduces in-person shopping, while forecast access strengthens this response and shifts shopping to days before higher pollution. Households curtail shopping more sharply on polluted days when recent forecasts have been more accurate. Moving from the mean to the 75th percentile of forecast accuracy yields 29 percent of the shopping-related exposure reduction associated with introducing forecast access.</p></details>
+<div class="paper-title">&dagger; <strong>&ldquo;Public Provision of Air Quality Forecasts: Access, Accuracy, and Household Avoidance&rdquo;</strong> (with Qingyin Cai, Qingxiao Li)</div>
+<details class="abstract">
+<summary>
+  <span class="paper-venue">Under Review</span>
+  <span class="paper-links">
+    <span aria-hidden="true">[</span>
+    <span class="abstract-toggle">Abstract</span>
+    <span aria-hidden="true">|</span>
+    <a href="https://www.lifengren.com/assets/papers/jmp_forecast_aviodance_lifeng.pdf"
+       target="_blank" rel="noopener">Working Paper</a>
+    <span aria-hidden="true">]</span>
+  </span>
+</summary>
+<p>Do air-quality forecasts help households avoid pollution exposure? We link nationwide household transactions to daily PM<sub>2.5</sub> and archived EPA AirNow forecasts during 2004–2019, exploiting staggered forecast coverage and wind-driven pollution transport. Coverage, which bundles forecasts with current air-quality information, doubles the response of store visits to PM<sub>2.5</sub>. Households with access shift shopping ahead of high-pollution days and respond more when recent forecasts are accurate. Raising recent accuracy from its mean to the 75th percentile cuts exposure by 26 percent of the access effect. Gross shopping-channel mortality benefits are about $16 million annually, before accounting for exposure from rescheduled trips.</p>
+</details>
 </div>
 
 <div class="paper">
-<div class="paper-title">&dagger; <strong>&ldquo;Drought and Agricultural Adaptation: Land Reallocation and Labor Dynamics in Vietnam&rdquo;</strong> (with Giang Thai, Khoa Vu, Nguyen Vuong)</div>
-<details class="abstract"><summary><span class="abstract-toggle">Abstract</span></summary><p>Climate change increases the frequency and intensity of droughts, posing major risks to agricultural production in developing economies such as Vietnam. We study how droughts reshape land allocation and input choices that underpin both short-run adaptation and long-run structural change. We find that droughts reduce rice cultivation, reallocating land away from rice toward other crops and aquaculture in the long term. In response to droughts, households intensify rice production on smaller plots, diversify into non-rice crops, and expand aquaculture in the short run. At the same time, droughts have relatively more adverse effects on local manufacturing sectors, pulling workers out of non-agriculture into agriculture. The additional agricultural labor is absorbed primarily into rice intensification and crop diversification, whereas aquaculture expansion is entirely driven by mechanization adoption. The results highlight various adjustment margins to droughts in interaction with local labor market conditions in shaping adaptation pathways. </p></details>
+<div class="paper-title">&dagger; <strong>&ldquo;Agricultural Adaptation to Drought: Evidence from Vietnam&rdquo;</strong> (with Giang Thai, Khoa Vu, Nguyen Vuong)</div>
+<details class="abstract">
+<summary>
+  <span class="paper-links">
+    <span aria-hidden="true">[</span>
+    <span class="abstract-toggle">Abstract</span>
+    <span aria-hidden="true">|</span>
+    <a href="https://www.lifengren.com/assets/papers/LR_DroughtAdaptation.pdf"
+       target="_blank" rel="noopener">Working Paper</a>
+    <span aria-hidden="true">]</span>
+  </span>
+</summary>
+<p>We study how drought shapes agricultural adaptation through the reallocation of land and inputs in Vietnam. Using a long difference approach, we find that in the long run, drought reallocates land away from rice toward other crops, while the shift toward aquaculture depends on local water conditions. Our mechanism analysis shows that drought persistently reduces rice productivity. Irrigation infrastructure mitigates the contraction of rice and facilitates crop diversification, while electricity access enables mechanization in aquaculture. We also find that drought is associated with a shift of labor from manufacturing into agriculture, where it is absorbed primarily by crop cultivation rather than aquaculture. Our findings shed light on how infrastructure and local factor markets shape farmers’ long-run adaptation margins.</p>
+</details>
 </div>
 
 <div class="paper">
@@ -17,14 +42,19 @@
 <details class="abstract"><summary><span class="abstract-toggle">Abstract</span></summary><p>Global biodiversity conservation pathways require large scale reallocation of land from agriculture toward restoration, yet how the resulting costs and benefits are distributed across countries remains poorly understood. We downscale land use projections from four integrated assessment models to 10 arc second resolution, estimate spatially explicit changes in carbon stocks using InVEST, and evaluate distributional outcomes across five socioeconomic dimensions through the Applied Justice Taxonomy and Assessment (AJUST) framework. We find that natural land and carbon stocks are already unevenly distributed at baseline. Under the most ambitious scenario, carbon sequestration efficiency improves but restoration burdens remain concentrated in tropical regions where vulnerability is highest. Inequality in per capita ecosystem service gains remains high across all scenarios, with Gini coefficients above 0.84. Vulnerable groups, including low income and high Indigenous Peoples' and Local Communities' land share countries, face higher restoration costs and less favorable balances between burdens and gains. Utilitarian, egalitarian, and prioritarian perspectives yield distinct evaluations of the same outcomes, demonstrating that no single framework is sufficient to assess the fairness of conservation pathways.</p></details>
 </div>
 
+
+<div class="paper">
+<div class="paper-title">&dagger;&ldquo;Land Use, Wildfire Smoke, and Global Agricultural Marketse&rdquo; (with Justin Johnson)</div>
+</div>
+
 ## Work in Progress
 
 <div class="paper">
-<div class="paper-title">&dagger;&ldquo;Global Agricultural Economic Impact of Wildfire Smoke&rdquo; (with Justin Johnson)</div>
+<div class="paper-title">&dagger;&ldquo;Ecosystem Services of Low-Intensity Fires: Evidence from the United States&rdquo;</div>
 </div>
 
 <div class="paper">
-<div class="paper-title">&ldquo;Gross Ecosystem Product&rdquo; (with <a href="https://natcapteems.umn.edu/">NatCap TEEMs</a>)</div>
+<div class="paper-title">&ldquo;Global Gross Ecosystem Product&rdquo; (with <a href="https://natcapteems.umn.edu/">NatCap TEEMs</a>)</div>
 </div>
 
 <div class="paper">
